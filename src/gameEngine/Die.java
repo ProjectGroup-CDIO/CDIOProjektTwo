@@ -13,7 +13,7 @@ public class Die {
 		
 		return faceValue;
 		
-	}//Hej
+	}//Hej1
 	
 	
 	
