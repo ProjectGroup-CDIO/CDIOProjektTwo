@@ -1,75 +1,75 @@
 	type::Street;;
-	backgroundColor::200,,120,,180;;
+	backgroundColor::255,,0,,0;;
 	foregroundColor::0,,0,,0;;
 	title::TOWER;;
 	subText::Get 250 Gold;; 
 	description::Welcome to the Tower, feel free to loot the dungeon. Beware of the dragon!!!;;
 ||		
 	type::Street;;
-	backgroundColor::75,,155,,225;;
+	backgroundColor::255,,0,,221;;
 	foregroundColor::0,,0,,0;;
 	title::CRATER;;
 	subText::Pay 200 Gold;; 
 	description::You fell into the crater and lost your wallet;;
 ||		
 	type::Street;;
-	backgroundColor::80,,110,,110;;
+	backgroundColor::104,,11,,255;;
 	foregroundColor::0,,0,,0;;
 	title::PALACE GATES;;
 	subText::Pay 100 Gold;;  
 	description::Knock on the gates to pay your weapon-taxes;;
 ||	
 	type::Street;;
-	backgroundColor::75,,155,,225;;
+	backgroundColor::11,,47,,255;;
 	foregroundColor::0,,0,,0;;
 	title::COLD DESERT;;
 	subText::Pay 20 Gold;; 
 	description::You have lost track of where you going and can't find your way home;;
 ||		
 	type::Street;;
-	backgroundColor::255,,0,,0;;
+	backgroundColor::11,,137,,255;;
 	foregroundColor::0,,0,,0;;
 	title::WALLED CITY;;
 	subText::Get 180 Gold;;  
 	description::.......;;
 ||		
 	type::Street;;
-	backgroundColor::75,,155,,225;;
+	backgroundColor::11,,223,,255;;
 	foregroundColor::0,,0,,0;;
 	title::MONASTERY;;
 	subText::Get 0 Gold;; 
 	description::.......;;
 ||	
         type::Street;;
-	backgroundColor::255,,0,,0;;
+	backgroundColor::11,,255,,223;;
 	foregroundColor::0,,0,,0;;
 	title::BLACK CAVE;; 
 	subText::Pay 70 Gold;; 
 	description::.......;;
 ||		
 	type::Street;;
-	backgroundColor::75,,155,,225;;
+	backgroundColor::11,,255,,121;;
 	foregroundColor::0,,0,,0;;
 	title::MOUNTIAN HUTS;; 
 	subText::Pay 60 Gold;;
 	description::.....;;
 ||	
 	type::Street;;
-	backgroundColor::255,,100,,100;;
+	backgroundColor::166,,255,,11;;
 	foregroundColor::0,,0,,0;;
 	title::THE WEREWALL;;
 	subText::Pay 80 Gold;; 
 	description::.......;;
 ||		
 	type::Street;;
-	backgroundColor::175,,155,,225;;
+	backgroundColor::247,,255,,11;;
 	foregroundColor::0,,0,,0;;
 	title::THE PIT;;
 	subText::Pay 90 Gold;; 
 	description::......;;
 ||	
         type::Street;;
-	backgroundColor::255,,0,,0;;
+	backgroundColor::255,,153,,11;;
 	foregroundColor::0,,0,,0;;
 	title::GOLDMINE;; 
 	subText::Get 650 Gold;; 
