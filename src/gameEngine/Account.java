@@ -27,7 +27,9 @@ public class Account {
 	}
 	
 	public void setBalance(int balance) {
-		this.balance = balance;
+		if(balance >= 0) {
+			this.balance = balance;
+		} 
 	}
 
 	public String toString() {
