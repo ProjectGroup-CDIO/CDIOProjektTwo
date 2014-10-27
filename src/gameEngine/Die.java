@@ -3,9 +3,9 @@ package gameEngine;
 public class Die {
 	
 	
-	private final int MAX = 6; //maximal v¾rdi pŒ terningen
+	private final int MAX = 6; //maximal vï¿½rdi pï¿½ terningen
 	
-	public int faceValue; // viser ternigens aktuelle v¾rdi
+	public int faceValue; // viser ternigens aktuelle vï¿½rdi
 	
 	public int rollDie(){
 		
@@ -13,7 +13,7 @@ public class Die {
 		
 		return faceValue;
 		
-	}
+	}//Hej
 	
 	
 	
