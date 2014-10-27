@@ -13,12 +13,15 @@ public class Account {
 	public String deposit(int amount) {
 		if(amount >= 0) { //eventuel fejlmeddelelse hvis amount<0 ? 
 			balance += amount;
-			return "Deposit successful";
-		} else return "Deposit unsuccessful";
+			return "Deposit succesful";
+		} else return "Deposit unsuccesful";
 	}
 
-	public void withdraw(int amount) {
-		balance -= amount;
+	public String withdraw(int amount) {
+		if(amount<=balance) {
+			balance -= amount;
+			return "Withdrawal succesful";
+		} else return "Withdrawal unsuccesful";
 	}
 
 	public int getBalance() {
