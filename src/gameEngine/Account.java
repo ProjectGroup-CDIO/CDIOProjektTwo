@@ -3,15 +3,13 @@ package gameEngine;
 public class Account {
 
 	int balance;
-	String name;
 
-	public Account(String name) {
+	public Account() {
 		balance = 1000;
-		this.name = name;
 	}
 
 	public String deposit(int amount) {
-		if(amount >= 0) { //eventuel fejlmeddelelse hvis amount<0 ? 
+		if(amount >= 0) {  
 			balance += amount;
 			return "Deposit succesful";
 		} else return "Deposit unsuccesful";
@@ -21,7 +19,7 @@ public class Account {
 		if(amount<=balance) {
 			balance -= amount;
 			return "Withdrawal succesful";
-		} else return "Withdrawal unsuccesful";
+		} else return "Withdrawal unsuccesful. Cannot withdraw amount larger than balance ";
 	}
 
 	public int getBalance() {
@@ -33,7 +31,7 @@ public class Account {
 	}
 
 	public String toString() {
-		return name + " has " + balance;
+		return "balance: " + balance;
 	}
 
 
