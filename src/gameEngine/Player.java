@@ -6,6 +6,10 @@ public class Player {
 	
 	Account playerAcc = new Account(); 
 	
+	public Player(String name) {
+		this.name = name; 
+	}
+	
 	public void setName(String name) {
 		this.name = name; 
 	}
