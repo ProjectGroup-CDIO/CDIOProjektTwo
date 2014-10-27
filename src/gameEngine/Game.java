@@ -1,6 +1,11 @@
 package gameEngine;
 
-// hej hejh
+import boundaryToMatador.GUI;
+
 public class Game {
 
+public void Game(){
+	System.out.println("hej");
+}
+	
 }
