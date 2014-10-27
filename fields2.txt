@@ -1,0 +1,76 @@
+	type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::TOWER;; 
+	subText:: + 250;; 
+	description::Get 250 Gold;;
+||		
+	type::Street;;
+	backgroundColor::75,,155,,225;;
+	foregroundColor::0,,0,,0;;
+	title::CRATER;; 
+	subText:: - 200;; 
+	description::Loose 200 Gold;;
+||		
+	type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::PALACE GATES;; 
+	subText:: - 100;; 
+	description::Loose 100 Gold;;
+||	
+	type::Street;;
+	backgroundColor::75,,155,,225;;
+	foregroundColor::0,,0,,0;;
+	title::COLD DESERT;; 
+	subText:: - 20;; 
+	description::Loose 20 Gold;;
+||		
+	type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::WALLED CITY;; 
+	subText:: + 180;; 
+	description::Get 180 Gold;;
+||		
+	type::Street;;
+	backgroundColor::75,,155,,225;;
+	foregroundColor::0,,0,,0;;
+	title::MONASTERY;; 
+	subText::0;; 
+	description::Get 0 Gold;;
+||	
+        type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::BLACK CAVE;; 
+	subText:: - 70;; 
+	description::Loose 70 Gold;;
+||		
+	type::Street;;
+	backgroundColor::75,,155,,225;;
+	foregroundColor::0,,0,,0;;
+	title::MOUNTIAN HUTS;; 
+	subText:: - 60;; 
+	description::Loose 60 Gold;;
+||	
+	type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::THE WEREWALL;; 
+	subText:: - 80;; 
+	description::Loose 80 Gold;;
+||		
+	type::Street;;
+	backgroundColor::75,,155,,225;;
+	foregroundColor::0,,0,,0;;
+	title::THE PIT;; 
+	subText::- 90;; 
+	description::Loose 90 Gold;;
+||	
+        type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::GOLDMINE;; 
+	subText:: + 650;; 
+	description::Get 650 Gold;;

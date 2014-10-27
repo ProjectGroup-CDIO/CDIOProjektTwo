@@ -5,7 +5,10 @@ import boundaryToMatador.GUI;
 public class Game {
 
 public void Game(){
-	System.out.println("hej");
+	GUI.create("fields2.txt");
+
+	GUI.addPlayer("Lars", 20);
+	
 }
 	
 }
