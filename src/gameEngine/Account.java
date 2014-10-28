@@ -36,7 +36,4 @@ public class Account {
 		return "balance: " + balance;
 	}
 
-
-
-
 }
