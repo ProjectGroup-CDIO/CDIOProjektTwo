@@ -31,11 +31,14 @@ public void game(){
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
     GUI.setCar(felt, "Lars");
 	GUI.setCar(1, "Poul");
+	
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
+	
 	GUI.showMessage("OK");
 	GUI.setCar(1, "Lars");
 	GUI.removeCar(felt, "Lars");
+	
 	int trow=0;
 	
 	if(trow==2){
