@@ -18,6 +18,10 @@ public class Game {
 public void game(){
 	GUI.create("fields2.txt");
 	
+	String i = "";
+
+	i = GUI.getUserButtonPressed(null, "Roll Dice");
+	
 	Die dieOne = new Die();
 	dieOne.rollDie();
 	Die dieTwo = new Die();
@@ -40,6 +44,8 @@ public void game(){
 	GUI.showMessage("OK");
 	GUI.setCar(1, "Lars");
 	GUI.removeCar(felt, "Lars");
+	
+	if(i.equals("Roll Dice")){
 	int trow=0;
 
 	if(trow==2){
@@ -52,6 +58,7 @@ public void game(){
 		System.out.println("Crater");
 		player1.playerAcc.deposit(250);
 		player2.playerAcc.deposit(250);
+		
 	}
 	if(trow==4){
 		System.out.println("Palace gates");
@@ -97,6 +104,7 @@ public void game(){
 		System.out.println("The Goldmine");
 		player1.playerAcc.deposit(250);
 		player2.playerAcc.deposit(250);
+	}
 	}
 
 }
