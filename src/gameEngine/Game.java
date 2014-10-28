@@ -19,10 +19,10 @@ public class Game {
 
 public void game(){
 	
-	String characterOne = JOptionPane.showInputDialog("Enter name for Player One");
-		char c = characterOne.charAt(0);
-	String characterTwo = JOptionPane.showInputDialog("Enter name for Player Two");
-		char v = characterTwo.charAt(0);
+	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One");
+		char c = playerOneName.charAt(0);
+	String playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
+		char v = playerTwoName.charAt(0);
 	
 		
 	GUI.create("fields2.txt");
@@ -32,25 +32,29 @@ public void game(){
 	Die dieTwo = new Die();
 	dieTwo.rollDie();
 	
-	GUI.addPlayer(characterOne, 0, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
-	GUI.addPlayer(characterTwo, 0, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
+	GUI.addPlayer(playerTwoName, 0, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
+	GUI.addPlayer(playerOneName, 0, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
 
+	// TEST MED GUI
+	
 	int felt = dieOne.faceValue + dieTwo.faceValue;
 	
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
-    GUI.setCar(felt, "Lars");
+    GUI.setCar(felt, playerOneName);
 
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
 			
-	GUI.setCar(1, "Poul");
+	GUI.setCar(1, playerTwoName);
 	
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
 	
 	GUI.showMessage("OK");
-	GUI.setCar(1, "Lars");
-	GUI.removeCar(felt, "Lars");
+	GUI.setCar(1, playerOneName);
+	GUI.removeCar(felt, playerOneName);
+	
+	// SLUT TEST MED GUI
 	
 	int trow=0;
 
