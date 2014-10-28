@@ -6,7 +6,7 @@ public class GameLauncher {
 		
 		Game game = new Game();
 		
-		game.Game();
+		game.game();
 		
 	}
 

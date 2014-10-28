@@ -6,7 +6,7 @@ public class Game {
 	
 	//test - GUI
 
-public void Game(){
+public void game(){
 	GUI.create("fields2.txt");
 	
 	Die dieOne = new Die();
@@ -17,8 +17,8 @@ public void Game(){
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 	
 	
-	GUI.addPlayer("Lars", 0, 255, 0, 0);
-	GUI.addPlayer("Poul", 0, 0, 0, 255);
+	GUI.addPlayer("Lars", 0, 0, 0, 0);
+	GUI.addPlayer("Poul", 0, 255, 255, 255);
 }
 	
 }

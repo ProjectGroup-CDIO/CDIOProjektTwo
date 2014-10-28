@@ -4,6 +4,7 @@
 	title::TOWER;;
 	subText::Get 250 Gold;; 
 	description::Welcome to the Tower, feel free to loot the dungeon. Beware of the dragon!!!;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::255,,0,,221;;
@@ -11,6 +12,7 @@
 	title::CRATER;;
 	subText::Pay 200 Gold;; 
 	description::You fell into the crater and lost your wallet;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::104,,11,,255;;
@@ -18,6 +20,7 @@
 	title::PALACE GATES;;
 	subText::Pay 100 Gold;;  
 	description::Knock on the gates to pay your weapon-taxes;;
+	leje:: ;;
 ||	
 	type::Street;;
 	backgroundColor::11,,47,,255;;
@@ -25,6 +28,7 @@
 	title::COLD DESERT;;
 	subText::Pay 20 Gold;; 
 	description::You have lost track of where you going and can't find your way home;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::11,,137,,255;;
@@ -32,6 +36,7 @@
 	title::WALLED CITY;;
 	subText::Get 180 Gold;;  
 	description::.......;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::11,,223,,255;;
@@ -39,6 +44,7 @@
 	title::MONASTERY;;
 	subText::Get 0 Gold;; 
 	description::.......;;
+	leje:: ;;
 ||	
         type::Street;;
 	backgroundColor::11,,255,,223;;
@@ -46,6 +52,7 @@
 	title::BLACK CAVE;; 
 	subText::Pay 70 Gold;; 
 	description::.......;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::11,,255,,121;;
@@ -53,6 +60,7 @@
 	title::MOUNTIAN HUTS;; 
 	subText::Pay 60 Gold;;
 	description::.....;;
+	leje:: ;;
 ||	
 	type::Street;;
 	backgroundColor::166,,255,,11;;
@@ -60,6 +68,7 @@
 	title::THE WEREWALL;;
 	subText::Pay 80 Gold;; 
 	description::.......;;
+	leje:: ;;
 ||		
 	type::Street;;
 	backgroundColor::247,,255,,11;;
@@ -67,6 +76,7 @@
 	title::THE PIT;;
 	subText::Pay 90 Gold;; 
 	description::......;;
+	leje:: ;;
 ||	
         type::Street;;
 	backgroundColor::255,,153,,11;;
@@ -74,3 +84,4 @@
 	title::GOLDMINE;; 
 	subText::Get 650 Gold;; 
 	description::......;;
+	leje:: ;;
