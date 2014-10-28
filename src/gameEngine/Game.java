@@ -5,8 +5,17 @@ import javax.swing.JOptionPane;
 import boundaryToMatador.GUI;
 
 public class Game {
-
-	// Fjernede flere unødvendige variabler
+	
+	int PlayerOnePoints = 1000;
+	int PlayerTwoPoints = 1000;
+	
+	int RollOne = 0;
+	int RollTwo = 0;
+	
+	boolean playerOne = true;
+	boolean playerTwo = false;
+	boolean game = true;
+		
 
 public void game(){
 	
@@ -54,93 +63,70 @@ public void game(){
 	
 	// SLUT TEST MED GUI
 	
-	
+
 	if(i.equals("Roll Dice")){
-		
 	int trow=dieOne.rollDie()+dieTwo.rollDie();
+
 
 	if(trow==2){
 		System.out.println("Tower");
-		if(playerOne){
-			player1.playerAcc.deposit(250);
-		}else
+		player1.playerAcc.deposit(250);
 		player2.playerAcc.deposit(250);
 		
 	}
 	if(trow==3){
 		System.out.println("Crater");
-		if(playerOne){
-			player1.playerAcc.withdraw(200);
-		}else
+		player1.playerAcc.withdraw(200);
 		player2.playerAcc.withdraw(200);
 
 	}
 	if(trow==4){
 		System.out.println("Palace gates");
-		if(playerOne){
-			player1.playerAcc.withdraw(100);
-		}else
+		player1.playerAcc.withdraw(100);
 		player2.playerAcc.withdraw(100);
 	}
 	if(trow==5){
 		System.out.println("Cold Desert");
-		if(playerOne){
-			player1.playerAcc.withdraw(20);
-		}else
+		player1.playerAcc.withdraw(20);
 		player2.playerAcc.withdraw(20);
 	}
 	if(trow==6){
 		System.out.println("Walled city");
-		if(playerOne){
-			player1.playerAcc.deposit(180);
-		}else
+		player1.playerAcc.deposit(180);
 		player2.playerAcc.deposit(180);
 	}
 	if(trow==7){
 		System.out.println("Monastrery");
-		if(playerOne){
-			player1.playerAcc.withdraw(0);
-		}else
+		player1.playerAcc.withdraw(0);
 		player2.playerAcc.withdraw(0);
 	}
 	if(trow==8){
 		System.out.println("Black cave");
-		if(playerOne){
-			player1.playerAcc.withdraw(70);
-		}else
+		player1.playerAcc.withdraw(70);
 		player2.playerAcc.withdraw(70);
 	}
 	if(trow==9){
 		System.out.println("Huts in the mountain");
-		if(playerOne){
-			player1.playerAcc.withdraw(60);
-		}else
+		player1.playerAcc.withdraw(60);
 		player2.playerAcc.withdraw(60);
 	}
 	if(trow==10){
 		System.out.println("The Werewall");
-		if(playerOne){
-			player1.playerAcc.withdraw(80);
-		}else
+		player1.playerAcc.withdraw(80);
 		player2.playerAcc.withdraw(80);
 	}
 	if(trow==11){
 		System.out.println("The pit");
-		if(playerOne){
-			player1.playerAcc.withdraw(90);
-		}else
+		player1.playerAcc.withdraw(90);
 		player2.playerAcc.withdraw(90);
 	}
 	if(trow==12){
 		System.out.println("The Goldmine");
-		if(playerOne){
-			player1.playerAcc.deposit(650);
-		}else
+		player1.playerAcc.deposit(650);
 		player2.playerAcc.deposit(650);
-	}
 	}
 	}
 
 }
 	
-
+}
