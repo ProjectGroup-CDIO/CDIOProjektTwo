@@ -30,6 +30,42 @@ public void game(){
 	
 	GUI.addPlayer("Lars", 0, 0, 0, 0);
 	GUI.addPlayer("Poul", 0, 255, 255, 255);
+	
+int trow=0;
+	
+	if(trow==2){
+		System.out.println("Tower");
+	}
+	if(trow==3){
+		System.out.println("Crater");
+	}
+	if(trow==4){
+		System.out.println("Palace gates");
+	}
+	if(trow==5){
+		System.out.println("Cold Desert");
+	}
+	if(trow==6){
+		System.out.println("Walled city");
+	}
+	if(trow==7){
+		System.out.println("Monastrery");
+	}
+	if(trow==8){
+		System.out.println("Black cave");
+	}
+	if(trow==9){
+		System.out.println("Huts in the mountain");
+	}
+	if(trow==10){
+		System.out.println("The Werewall");
+	}
+	if(trow==11){
+		System.out.println("The pit");
+	}
+	if(trow==12){
+		System.out.println("The Goldmine");
+	}
 }
 	
 }
