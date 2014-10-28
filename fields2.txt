@@ -1,4 +1,12 @@
 	type::Street;;
+	backgroundColor::139,,137,,137;;
+	foregroundColor::0,,0,,0;;
+	title:: ;;
+	subText::START;; 
+	description:: ;;
+	leje:: ;;
+||		
+	type::Street;;
 	backgroundColor::255,,0,,0;;
 	foregroundColor::0,,0,,0;;
 	title::TOWER;;
@@ -11,7 +19,7 @@
 	foregroundColor::0,,0,,0;;
 	title::CRATER;;
 	subText::Pay 200 Gold;; 
-	description::You fell into the crater and lost your wallet;;
+	description::CRATER: You fell into the crater and lost your wallet;;
 	leje:: ;;
 ||		
 	type::Street;;
