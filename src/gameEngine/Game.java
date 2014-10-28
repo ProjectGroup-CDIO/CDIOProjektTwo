@@ -13,10 +13,7 @@ public class Game {
 	boolean playerOne = true;
 	boolean playerTwo = false;
 	boolean game = true;
-	
-	static String Felt = "";
-	int feltPoint = 0;
-	
+		
 
 public void game(){
 	GUI.create("fields2.txt");
