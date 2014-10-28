@@ -6,8 +6,8 @@ import boundaryToMatador.GUI;
 
 public class Game {
 	
-	int PlayerOnePoints = 1000;
-	int PlayerTwoPoints = 1000;
+	int playerOnePoints = 1000;
+	int playerTwoPoints = 1000;
 	
 	int RollOne = 0;
 	int RollTwo = 0;
@@ -37,8 +37,8 @@ public void game(){
 	Die dieTwo = new Die();
 	dieTwo.rollDie();
 	
-	GUI.addPlayer(playerTwoName, 0, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
-	GUI.addPlayer(playerOneName, 0, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
+	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
+	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
 
 	// TEST MED GUI
 	
