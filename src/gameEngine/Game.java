@@ -31,8 +31,8 @@ public void game(){
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
     GUI.setCar(felt, "Lars");
 	
-	GUI.addPlayer("PlayerOne", PlayerOnePoints);
-	GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
+	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
+	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
 	
 	
 int trow=0;
