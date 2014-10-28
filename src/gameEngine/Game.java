@@ -54,70 +54,93 @@ public void game(){
 	
 	// SLUT TEST MED GUI
 	
-
+	
 	if(i.equals("Roll Dice")){
+		
 	int trow=dieOne.rollDie()+dieTwo.rollDie();
-
 
 	if(trow==2){
 		System.out.println("Tower");
-		player1.playerAcc.deposit(250);
+		if(playerOne){
+			player1.playerAcc.deposit(250);
+		}else
 		player2.playerAcc.deposit(250);
 		
 	}
 	if(trow==3){
 		System.out.println("Crater");
-		player1.playerAcc.withdraw(200);
+		if(playerOne){
+			player1.playerAcc.withdraw(200);
+		}else
 		player2.playerAcc.withdraw(200);
 
 	}
 	if(trow==4){
 		System.out.println("Palace gates");
-		player1.playerAcc.withdraw(100);
+		if(playerOne){
+			player1.playerAcc.withdraw(100);
+		}else
 		player2.playerAcc.withdraw(100);
 	}
 	if(trow==5){
 		System.out.println("Cold Desert");
-		player1.playerAcc.withdraw(20);
+		if(playerOne){
+			player1.playerAcc.withdraw(20);
+		}else
 		player2.playerAcc.withdraw(20);
 	}
 	if(trow==6){
 		System.out.println("Walled city");
-		player1.playerAcc.deposit(180);
+		if(playerOne){
+			player1.playerAcc.deposit(180);
+		}else
 		player2.playerAcc.deposit(180);
 	}
 	if(trow==7){
 		System.out.println("Monastrery");
-		player1.playerAcc.withdraw(0);
+		if(playerOne){
+			player1.playerAcc.withdraw(0);
+		}else
 		player2.playerAcc.withdraw(0);
 	}
 	if(trow==8){
 		System.out.println("Black cave");
-		player1.playerAcc.withdraw(70);
+		if(playerOne){
+			player1.playerAcc.withdraw(70);
+		}else
 		player2.playerAcc.withdraw(70);
 	}
 	if(trow==9){
 		System.out.println("Huts in the mountain");
-		player1.playerAcc.withdraw(60);
+		if(playerOne){
+			player1.playerAcc.withdraw(60);
+		}else
 		player2.playerAcc.withdraw(60);
 	}
 	if(trow==10){
 		System.out.println("The Werewall");
-		player1.playerAcc.withdraw(80);
+		if(playerOne){
+			player1.playerAcc.withdraw(80);
+		}else
 		player2.playerAcc.withdraw(80);
 	}
 	if(trow==11){
 		System.out.println("The pit");
-		player1.playerAcc.withdraw(90);
+		if(playerOne){
+			player1.playerAcc.withdraw(90);
+		}else
 		player2.playerAcc.withdraw(90);
 	}
 	if(trow==12){
 		System.out.println("The Goldmine");
-		player1.playerAcc.deposit(650);
+		if(playerOne){
+			player1.playerAcc.deposit(650);
+		}else
 		player2.playerAcc.deposit(650);
+	}
 	}
 	}
 
 }
 	
-}
+
