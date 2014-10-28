@@ -28,8 +28,6 @@ public void game(){
 	GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
 	
-	GUI.addPlayer("Lars", 0, 0, 0, 0);
-	GUI.addPlayer("Poul", 0, 255, 255, 255);
 	
 int trow=0;
 	
