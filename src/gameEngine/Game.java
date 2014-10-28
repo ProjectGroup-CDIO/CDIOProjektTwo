@@ -1,5 +1,7 @@
 package gameEngine;
 
+import javax.swing.JOptionPane;
+
 import boundaryToMatador.GUI;
 
 public class Game {
@@ -16,6 +18,13 @@ public class Game {
 		
 
 public void game(){
+	
+	String characterOne = JOptionPane.showInputDialog("Enter name for Player One");
+		char c = characterOne.charAt(0);
+	String characterTwo = JOptionPane.showInputDialog("Enter name for Player Two");
+		char v = characterTwo.charAt(0);
+	
+		
 	GUI.create("fields2.txt");
 	
 	Die dieOne = new Die();
@@ -23,8 +32,8 @@ public void game(){
 	Die dieTwo = new Die();
 	dieTwo.rollDie();
 	
-	GUI.addPlayer("Lars", 0, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
-	GUI.addPlayer("Poul", 0, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
+	GUI.addPlayer(characterOne, 0, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
+	GUI.addPlayer(characterTwo, 0, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
 
 	int felt = dieOne.faceValue + dieTwo.faceValue;
 	
