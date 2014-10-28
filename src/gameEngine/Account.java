@@ -2,7 +2,7 @@ package gameEngine;
 
 public class Account {
 
-	int balance;
+	private int balance;
 
 	public Account() {
 		balance = 1000;
@@ -12,7 +12,7 @@ public class Account {
 		if(amount >= 0) {  
 			balance += amount;
 			return "Deposit succesful";
-		} else return "Deposit unsuccesful";
+		} else return "Deposit unsuccesful. Please deposit positive amount";
 	}
 
 	public String withdraw(int amount) {
