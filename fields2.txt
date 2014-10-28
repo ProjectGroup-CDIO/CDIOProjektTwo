@@ -11,7 +11,7 @@
 	foregroundColor::0,,0,,0;;
 	title::TOWER;;
 	subText::Get 250 Gold;; 
-	description::Welcome to the Tower, feel free to loot the dungeon. Beware of the dragon!!!;;
+	description::TOWER: Welcome to the Tower, feel free to loot the dungeon. Beware of the dragon!!!;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -27,7 +27,7 @@
 	foregroundColor::0,,0,,0;;
 	title::PALACE GATES;;
 	subText::Pay 100 Gold;;  
-	description::Knock on the gates to pay your weapon-taxes;;
+	description::PALACE GATES: Knock on the gates to pay your weapon-taxes;;
 	leje:: ;;
 ||	
 	type::Street;;
@@ -35,7 +35,7 @@
 	foregroundColor::0,,0,,0;;
 	title::COLD DESERT;;
 	subText::Pay 20 Gold;; 
-	description::You have lost track of where you going and can't find your way home;;
+	description::COLD DESERT: You have lost track of where you going and can't find your way home;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -43,7 +43,7 @@
 	foregroundColor::0,,0,,0;;
 	title::WALLED CITY;;
 	subText::Get 180 Gold;;  
-	description::.......;;
+	description::WALLED CITY: .......;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -51,7 +51,7 @@
 	foregroundColor::0,,0,,0;;
 	title::MONASTERY;;
 	subText::Get 0 Gold;; 
-	description::.......;;
+	description::MONASTERY: .......;;
 	leje:: ;;
 ||	
         type::Street;;
@@ -59,7 +59,7 @@
 	foregroundColor::0,,0,,0;;
 	title::BLACK CAVE;; 
 	subText::Pay 70 Gold;; 
-	description::.......;;
+	description::BLACK CAVE: .......;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -67,7 +67,7 @@
 	foregroundColor::0,,0,,0;;
 	title::MOUNTIAN HUTS;; 
 	subText::Pay 60 Gold;;
-	description::.....;;
+	description::MOUNTAIN HUTS: .....;;
 	leje:: ;;
 ||	
 	type::Street;;
@@ -75,7 +75,7 @@
 	foregroundColor::0,,0,,0;;
 	title::THE WEREWALL;;
 	subText::Pay 80 Gold;; 
-	description::.......;;
+	description::THE WEREWALL: .......;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -83,7 +83,7 @@
 	foregroundColor::0,,0,,0;;
 	title::THE PIT;;
 	subText::Pay 90 Gold;; 
-	description::......;;
+	description::THE PIT: ......;;
 	leje:: ;;
 ||	
         type::Street;;
@@ -91,5 +91,5 @@
 	foregroundColor::0,,0,,0;;
 	title::GOLDMINE;; 
 	subText::Get 650 Gold;; 
-	description::......;;
+	description::GOLDMINE: ......;;
 	leje:: ;;

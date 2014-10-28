@@ -48,14 +48,18 @@ public void game(){
 	Player player2 = new Player("PlayerTwo");
 			
 	GUI.setCar(1, "Poul");
+	
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
+	
 	GUI.showMessage("OK");
 	GUI.setCar(1, "Lars");
 	GUI.removeCar(felt, "Lars");
 	
+
 	if(i.equals("Roll Dice")){
 	int trow=dieOne.rollDie()+dieTwo.rollDie();
+
 
 	if(trow==2){
 		System.out.println("Tower");
