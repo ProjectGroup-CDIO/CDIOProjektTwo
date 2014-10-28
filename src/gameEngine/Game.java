@@ -14,11 +14,14 @@ public void game(){
 	Die dieTwo = new Die();
 	dieTwo.rollDie();
 	
+	GUI.addPlayer("Lars", 0, 0, 0, 0);	  // De tre sidste tal angiver farve på bilen   
+	GUI.addPlayer("Poul", 0, 255, 255, 255); // De tre sidste tal angiver farve på bilen
+
+	int felt = (dieOne.faceValue + dieTwo.faceValue) - 1;
+	
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
+    GUI.setCar(felt, "Lars");
 	
-	
-	GUI.addPlayer("Lars", 0, 0, 0, 0);
-	GUI.addPlayer("Poul", 0, 255, 255, 255);
 }
 	
 }
