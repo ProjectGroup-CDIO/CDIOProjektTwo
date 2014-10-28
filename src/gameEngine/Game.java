@@ -5,24 +5,16 @@ import javax.swing.JOptionPane;
 import boundaryToMatador.GUI;
 
 public class Game {
-	
-	int PlayerOnePoints = 1000;
-	int PlayerTwoPoints = 1000;
-	
-	int RollOne = 0;
-	int RollTwo = 0;
-	
-	boolean playerOne = true;
-	boolean playerTwo = false;
-	boolean game = true;
-		
+
+	// Fjernede flere unødvendige variabler
 
 public void game(){
 	
 	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One");
-		char c = playerOneName.charAt(0);
 	String playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
-		char v = playerTwoName.charAt(0);
+		
+	//Tilføjet valgmulighed for navne
+	//Fjernet unødvendige chars
 	
 		
 	GUI.create("fields2.txt");
@@ -57,6 +49,8 @@ public void game(){
 	GUI.showMessage("OK");
 	GUI.setCar(1, playerOneName);
 	GUI.removeCar(felt, playerOneName);
+	
+	// Tilføjet spiller-navnene, således at bilerne følger den spiller navnet tilhører
 	
 	// SLUT TEST MED GUI
 	
