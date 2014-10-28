@@ -50,18 +50,18 @@ public void game(){
 	}
 	if(trow==3){
 		System.out.println("Crater");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==4){
 		System.out.println("Palace gates");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==5){
 		System.out.println("Cold Desert");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==6){
 		System.out.println("Walled city");
@@ -70,28 +70,28 @@ public void game(){
 	}
 	if(trow==7){
 		System.out.println("Monastrery");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==8){
 		System.out.println("Black cave");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==9){
 		System.out.println("Huts in the mountain");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==10){
 		System.out.println("The Werewall");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==11){
 		System.out.println("The pit");
-		player1.playerAcc.deposit(250);
-		player2.playerAcc.deposit(250);
+		player1.playerAcc.withdraw(250);
+		player2.playerAcc.withdraw(250);
 	}
 	if(trow==12){
 		System.out.println("The Goldmine");
