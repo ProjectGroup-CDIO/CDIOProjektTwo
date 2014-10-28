@@ -26,16 +26,17 @@ public void game(){
 	GUI.addPlayer("Lars", 0, 0, 0, 0);	  // De tre sidste tal angiver farve på bilen   
 	GUI.addPlayer("Poul", 0, 255, 255, 255); // De tre sidste tal angiver farve på bilen
 
-	int felt = (dieOne.faceValue + dieTwo.faceValue) - 1;
+	int felt = dieOne.faceValue + dieTwo.faceValue;
 	
 	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
     GUI.setCar(felt, "Lars");
-	
+	GUI.setCar(1, "Poul");
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
-	
-	
-int trow=0;
+	GUI.showMessage("OK");
+	GUI.setCar(1, "Lars");
+	GUI.removeCar(felt, "Lars");
+	int trow=0;
 	
 	if(trow==2){
 		System.out.println("Tower");
