@@ -27,6 +27,10 @@ public void game(){
 		
 	GUI.create("fields2.txt");
 	
+	String i = "";
+
+	i = GUI.getUserButtonPressed(null, "Roll Dice");
+	
 	Die dieOne = new Die();
 	dieOne.rollDie();
 	Die dieTwo = new Die();
@@ -56,7 +60,10 @@ public void game(){
 	
 	// SLUT TEST MED GUI
 	
-	int trow=0;
+
+	if(i.equals("Roll Dice")){
+	int trow=dieOne.rollDie()+dieTwo.rollDie();
+
 
 	if(trow==2){
 		System.out.println("Tower");
@@ -68,6 +75,7 @@ public void game(){
 		System.out.println("Crater");
 		player1.playerAcc.withdraw(200);
 		player2.playerAcc.withdraw(200);
+
 	}
 	if(trow==4){
 		System.out.println("Palace gates");
@@ -113,6 +121,7 @@ public void game(){
 		System.out.println("The Goldmine");
 		player1.playerAcc.deposit(650);
 		player2.playerAcc.deposit(650);
+	}
 	}
 
 }
