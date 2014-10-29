@@ -23,7 +23,19 @@ public void game(){
 	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); //lets the player type in his or her name
 	String playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
 		
-	
+	String[] choices = { "English", "Dansk"};
+    String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
+        "The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
+        choices, 
+        choices[1]); 
+    System.out.println(input);
+
+    if(input.equals("Dansk")){
+    	GUI.create("dansk.txt");	
+    	}
+    else if(input.equals("English")){
+    	GUI.create("fields2.txt");
+    }
 	
 	
 		
