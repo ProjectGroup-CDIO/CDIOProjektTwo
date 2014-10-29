@@ -37,10 +37,6 @@ public void game(){
     	GUI.create("fields2.txt");
     }
 	
-	
-		
-	GUI.create("fields2.txt");
-	
 	String i = "";
 
 	i = GUI.getUserButtonPressed(null, "Roll Dice");
