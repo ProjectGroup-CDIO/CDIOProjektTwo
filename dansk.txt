@@ -9,9 +9,9 @@
 	type::Street;;
 	backgroundColor::255,,0,,0;;
 	foregroundColor::0,,0,,0;;
-	title::TÅRN;;
-	subText::Få 250 Gold;; 
-	description::TÅRN: Velkommen til Tårnet, føl dig fri til at tage hvadend du kan. Pas på dragen!!!;;
+	title::TAARN;;
+	subText::Faa 250 Gold;; 
+	description::TAARN: Velkommen til Taarnet, foel dig fri til at tage hvadend du kan. Pas på dragen!!!;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -27,15 +27,15 @@
 	foregroundColor::0,,0,,0;;
 	title::PALADSETS INDGANG;;
 	subText::Betal 100 Gold;;  
-	description::PALADSETS INDGANG: Bank på, og betal våben-beskatning;;
+	description::PALADSETS INDGANG: Bank på, og betal vaaben-beskatning;;
 	leje:: ;;
 ||	
 	type::Street;;
 	backgroundColor::11,,47,,255;;
 	foregroundColor::0,,0,,0;;
-	title::KOLD ØRKEN;;
+	title::KOLD OERKEN;;
 	subText::Betal 20 Gold;; 
-	description::KOLD ØRKEN: Du aner ikke hvor du befinder dig, og kan ikke finde hjem.;;
+	description::KOLD OERKEN: Du aner ikke hvor du befinder dig, og kan ikke finde hjem.;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -43,7 +43,7 @@
 	foregroundColor::0,,0,,0;;
 	title::BEMURET BY;;
 	subText::Få 180 Gold;;  
-	description::BEMURET BY: Du formår at snige dig ind bag byens mure. Fyld lommerne!!! ;;
+	description::BEMURET BY: Du formaar at snige dig ind bag byens mure. Fyld lommerne!!! ;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -51,7 +51,7 @@
 	foregroundColor::0,,0,,0;;
 	title::KLOSTER;;
 	subText::Få 0 Gold;; 
-	description::KLOSTER: Munkene og nonnerne har intet at tilbyde. Fortsæt!;;
+	description::KLOSTER: Munkene og nonnerne har intet at tilbyde. Fortsaet!;;
 	leje:: ;;
 ||	
     	type::Street;;
@@ -59,7 +59,7 @@
 	foregroundColor::0,,0,,0;;
 	title::SORT GROTTE;; 
 	subText::Betal 70 Gold;; 
-	description::SORT GROTTE: Du bliver fortryllet ved skønheden af stalagmitter og glimtesten;;
+	description::SORT GROTTE: Du bliver fortryllet ved skoenheden af stalagmitter og glimtesten;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -67,15 +67,15 @@
 	foregroundColor::0,,0,,0;;
 	title::BJERGHYTTER;; 
 	subText::Betal 60 Gold;;
-	description::BJERGHYTTER: Højt over de overfyldte turistattraktioner, tilbyder de spektakulær kaffe.;;
+	description::BJERGHYTTER: Hoejt over de overfyldte turistattraktioner, tilbyder de spektakulaer kaffe.;;
 	leje:: ;;
 ||	
 	type::Street;;
 	backgroundColor::166,,255,,11;;
 	foregroundColor::0,,0,,0;;
-	title::VARVÆGGEN;;
+	title::VARVAEGGEN;;
 	subText::Betal 80 Gold;; 
-	description::VARVÆGGEN: Du griber dig selv i at måbe over Varulve-Væggen. Du finder styrken til at fortsætte.;;
+	description::VARVAEGGEN: Du griber dig selv i at maabe over Varulve-Vaeggen. Du finder styrken til at fortsaette.;;
 	leje:: ;;
 ||		
 	type::Street;;
