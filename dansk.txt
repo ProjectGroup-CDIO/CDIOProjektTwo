@@ -1,0 +1,95 @@
+	type::Street;;
+	backgroundColor::139,,137,,137;;
+	foregroundColor::0,,0,,0;;
+	title:: ;;
+	subText::START;; 
+	description:: ;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::255,,0,,0;;
+	foregroundColor::0,,0,,0;;
+	title::TÅRN;;
+	subText::Få 250 Gold;; 
+	description::TÅRN: Velkommen til Tårnet, føl dig fri til at tage hvadend du kan. Pas på dragen!!!;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::255,,0,,221;;
+	foregroundColor::0,,0,,0;;
+	title::KRATER;;
+	subText::Betal 200 Gold;; 
+	description::KRATER: Du faldt ned i krateret og mistede din pung!;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::104,,11,,255;;
+	foregroundColor::0,,0,,0;;
+	title::PALADSETS INDGANG;;
+	subText::Betal 100 Gold;;  
+	description::PALADSETS INDGANG: Bank på, og betal våben-beskatning;;
+	leje:: ;;
+||	
+	type::Street;;
+	backgroundColor::11,,47,,255;;
+	foregroundColor::0,,0,,0;;
+	title::KOLD ØRKEN;;
+	subText::Betal 20 Gold;; 
+	description::KOLD ØRKEN: Du aner ikke hvor du befinder dig, og kan ikke finde hjem.;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::11,,137,,255;;
+	foregroundColor::0,,0,,0;;
+	title::BEMURET BY;;
+	subText::Få 180 Gold;;  
+	description::BEMURET BY: Du formår at snige dig ind bag byens mure. Fyld lommerne!!! ;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::11,,223,,255;;
+	foregroundColor::0,,0,,0;;
+	title::KLOSTER;;
+	subText::Få 0 Gold;; 
+	description::KLOSTER: Munkene og nonnerne har intet at tilbyde. Fortsæt!;;
+	leje:: ;;
+||	
+    	type::Street;;
+	backgroundColor::11,,255,,223;;
+	foregroundColor::0,,0,,0;;
+	title::SORT GROTTE;; 
+	subText::Betal 70 Gold;; 
+	description::SORT GROTTE: Du bliver fortryllet ved skønheden af stalagmitter og glimtesten;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::11,,255,,121;;
+	foregroundColor::0,,0,,0;;
+	title::BJERGHYTTER;; 
+	subText::Betal 60 Gold;;
+	description::BJERGHYTTER: Højt over de overfyldte turistattraktioner, tilbyder de spektakulær kaffe.;;
+	leje:: ;;
+||	
+	type::Street;;
+	backgroundColor::166,,255,,11;;
+	foregroundColor::0,,0,,0;;
+	title::VARVÆGGEN;;
+	subText::Betal 80 Gold;; 
+	description::VARVÆGGEN: Du griber dig selv i at måbe over Varulve-Væggen. Du finder styrken til at fortsætte.;;
+	leje:: ;;
+||		
+	type::Street;;
+	backgroundColor::247,,255,,11;;
+	foregroundColor::0,,0,,0;;
+	title::HULLET;;
+	subText::Betal 90 Gold;; 
+	description::HULLET: Se dig for! Du falder ned i et hul fyldt af slanger og edderkopper.;;
+	leje:: ;;
+||	
+    	type::Street;;
+	backgroundColor::255,,153,,11;;
+	foregroundColor::0,,0,,0;;
+	title::GULDMINE;; 
+	subText::Få 650 Gold;; 
+	description::GULDMINE: Wow! Du fandt guldminen. Stedet er styret af hårdtarbejdende nisser.;;
+	leje:: ;;
