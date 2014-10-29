@@ -20,22 +20,31 @@ public class Game {
 
 public void game(){
 	
-	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); //lets the player type in his or her name
-	String playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
-		
+	String playerOneName = ""; 
+	String playerTwoName = ""; 
+	
 	String[] choices = { "English", "Dansk"};
-    String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
-        "The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
-        choices, 
-        choices[1]); 
-    System.out.println(input);
+	String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
+			"The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
+			choices, 
+			choices[1]); 
+	System.out.println(input);
+	
+	if(input.equals("Dansk")){
+		GUI.create("dansk.txt");
+	}
+	else if(input.equals("English")){
+		GUI.create("fields2.txt");
+	}
+	if(input.equals("Engelsk")){
+		playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); //lets the player type in his or her name
+		playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
+	}else if(input.equals("Dansk")){
+		playerOneName = JOptionPane.showInputDialog("Indtast navn for spiller 1"); 
+		playerTwoName = JOptionPane.showInputDialog("Indtast navn for spiller 2");
+	}
 
-    if(input.equals("Dansk")){
-    	GUI.create("dansk.txt");	
-    	}
-    else if(input.equals("English")){
-    	GUI.create("fields2.txt");
-    }
+	
 	
 	String i = "";
 
