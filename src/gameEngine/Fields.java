@@ -20,7 +20,7 @@ public class Fields {
 					player2.playerAcc.deposit(250);
 				}
 				return "Tower";
-			}
+			}else
 			if(trow==3){
 				if(p1){
 					player1.playerAcc.withdraw(200);
@@ -29,7 +29,7 @@ public class Fields {
 					player2.playerAcc.withdraw(200);
 				}
 				return "Crater";
-			}
+			}else
 			if(trow==4){
 				if(p1){
 					player1.playerAcc.withdraw(100);
@@ -38,7 +38,7 @@ public class Fields {
 					player2.playerAcc.withdraw(100);
 				}
 				return "Palace gates";
-			}
+			}else
 			if(trow==5){
 				if(p1){
 					player1.playerAcc.withdraw(20);
@@ -47,7 +47,7 @@ public class Fields {
 					player2.playerAcc.withdraw(20);
 				}
 				return "Cold Desert";
-			}
+			}else
 			if(trow==6){
 				if(p1){
 					player1.playerAcc.deposit(180);
@@ -56,7 +56,7 @@ public class Fields {
 					player2.playerAcc.deposit(180);
 				}
 				return "Walled city";
-			}
+			}else
 			if(trow==7){
 				if(p1){
 					player1.playerAcc.withdraw(0);
@@ -65,7 +65,7 @@ public class Fields {
 					player2.playerAcc.withdraw(0);
 				}
 				return "Monastrery";
-			}
+			}else
 			if(trow==8){
 				if(p1){
 					player1.playerAcc.withdraw(70);
@@ -74,7 +74,7 @@ public class Fields {
 					player2.playerAcc.withdraw(70);
 				}
 				return "Black cave";
-			}
+			}else
 			if(trow==9){
 				if(p1){
 					player1.playerAcc.withdraw(60);
@@ -83,7 +83,7 @@ public class Fields {
 					player2.playerAcc.withdraw(60);
 				}
 				return "Huts in the mountain";
-			}
+			}else
 			if(trow==10){
 				if(p1){
 					player1.playerAcc.withdraw(80);
@@ -92,7 +92,7 @@ public class Fields {
 					player2.playerAcc.withdraw(80);
 				}
 				return "The Werewall";
-			}
+			}else
 			if(trow==11){
 				if(p1){
 					player1.playerAcc.withdraw(90);
@@ -101,7 +101,7 @@ public class Fields {
 					player2.playerAcc.withdraw(90);
 				}
 				return "The pit";
-			}
+			}else
 			if(trow==12){
 				if(p1){
 					player1.playerAcc.deposit(650);
@@ -111,9 +111,9 @@ public class Fields {
 				}
 				return "The Goldmine";
 			}
+			else return "Der skal slås mellem 2-12";
 
-		}
-		else return "Skriv Roll Dice";
+		}else return "Skriv Roll Dice";
 	}
 
 }

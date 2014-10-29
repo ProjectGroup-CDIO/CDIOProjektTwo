@@ -16,6 +16,7 @@ public class Game {
 	boolean playerTwo = false;
 	boolean game = true;
 		
+	
 
 public void game(){
 	
@@ -63,10 +64,14 @@ public void game(){
 	
 	// SLUT TEST MED GUI
 	
-
+	while(game) {
+		
+	
 	if(i.equals("Roll Dice")){
 	int trow=dieOne.rollDie()+dieTwo.rollDie();
-
+	
+	
+	}
 //deleting the Feilds from Game
 	}
 
