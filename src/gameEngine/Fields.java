@@ -2,7 +2,7 @@ package gameEngine;
 
 public class Fields {
 
-	public String field(boolean p1, boolean p2, Player player1, Player player2, int trow, String i){ 
+	public static String field(boolean p1, boolean p2, Player player1, Player player2, int trow, String i){ 
 
 		if(i.equals("Roll Dice")){
 

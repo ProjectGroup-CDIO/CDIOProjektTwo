@@ -20,28 +20,14 @@ public class Game {
 
 public void game(){
 	
-	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One");
+	String playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); //lets the player type in his or her name
 	String playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
 		
-	//Tilf�jet valgmulighed for navne
-	//Fjernet un�dvendige chars
 	
-	String[] choices = { "English", "Dansk"};
-    String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
-        "The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
-        choices, 
-        choices[1]); 
-    System.out.println(input);
-
-    if(input.equals("Dansk")){
-    	GUI.create("dansk.txt");	
-    	}
-    else if(input.equals("English")){
-    	GUI.create("fields2.txt");
-    	}
-
-    // Added language-selection
-
+	
+	
+		
+	GUI.create("fields2.txt");
 	
 	String i = "";
 
@@ -52,8 +38,8 @@ public void game(){
 	Die dieTwo = new Die();
 	dieTwo.rollDie();
 	
-	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); // De tre sidste tal angiver farve p� bilen
-	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	  // De tre sidste tal angiver farve p� bilen   
+	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); //last three arguments are RGB-color
+	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	    
 
 	// TEST MED GUI
 	
@@ -84,6 +70,7 @@ public void game(){
 	if(i.equals("Roll Dice")){
 	int trow=dieOne.rollDie()+dieTwo.rollDie();
 	
+	Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 	
 	}
 //deleting the Feilds from Game
