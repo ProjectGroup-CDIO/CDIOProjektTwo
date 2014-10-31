@@ -52,48 +52,57 @@ public void game(){
 	
 	String i = "";
 
-	i = GUI.getUserButtonPressed(null, "Roll Dice");
 	
 	Die dieOne = new Die();
-	dieOne.rollDie();
 	Die dieTwo = new Die();
-	dieTwo.rollDie();
 	
 	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); //last three arguments are RGB-color
 	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	    
+	
 
-	// TEST MED GUI
 	
-	int felt = dieOne.faceValue + dieTwo.faceValue;
-	
-	GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
-    GUI.setCar(felt, playerOneName);
 
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
 			
-	GUI.setCar(1, playerTwoName);
 	
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
 	
-	GUI.showMessage("OK");
-	GUI.setCar(1, playerOneName);
-	GUI.removeCar(felt, playerOneName);
 	
-	// Tilf�jet spiller-navnene, s�ledes at bilerne f�lger den spiller navnet tilh�rer
 	
-	// SLUT TEST MED GUI
+	
 	
 	while(game) {
 		
+		i = GUI.getUserButtonPressed(null, "Roll Dice");
 	
 	if(i.equals("Roll Dice")){
-	int trow=dieOne.rollDie()+dieTwo.rollDie();
+		dieOne.rollDie();
+		dieTwo.rollDie();
+		int trow=dieOne.faceValue+dieTwo.faceValue;
+		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
+		if(playerOne) {
+			GUI.removeCar(trow, playerTwoName);
+			GUI.setCar(1, playerTwoName);
+			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
+			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			GUI.showMessage("PlayerTwos turn");
+			playerTwo = true;
+		}
+		if(playerTwo) {
+			GUI.removeCar(trow, playerOneName);
+			GUI.setCar(1, playerOneName);
+			GUI.setCar(trow, playerTwoName); 
+			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			GUI.showMessage("PlayerOnes turn");
+			playerOne = true;
+		}
 	
-	Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+	
 	
 	}
+	
 //deleting the Feilds from Game
 	}
 
