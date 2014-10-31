@@ -6,6 +6,11 @@ import boundaryToMatador.GUI;
 
 public class Game {
 	
+	boolean playerOneVic = false;
+	boolean playerTwoVic = false;
+	boolean playerOneLoss = false;
+	boolean playerTwoLoss = false;
+	
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
 	
@@ -78,6 +83,9 @@ public void game(){
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
+			if(player1.playerAcc.balance==0){
+				
+			}
 		}
 		
 		if(playerTwo) {
