@@ -36,12 +36,12 @@ public void game(){
 	else if(input.equals("English")){
 		GUI.create("fields2.txt");
 	}
-	if(input.equals("Engelsk")){
-		playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); //lets the player type in his or her name
+	if(input.equals("Dansk")){
+		playerOneName = JOptionPane.showInputDialog("Indtast navn for Spiller Et"); //lets the player type in his or her name
+		playerTwoName = JOptionPane.showInputDialog("Indtast navn for Spiller To");
+	}else if(input.equals("English")){
+		playerOneName = JOptionPane.showInputDialog("Enter name for Player One"); 
 		playerTwoName = JOptionPane.showInputDialog("Enter name for Player Two");
-	}else if(input.equals("Dansk")){
-		playerOneName = JOptionPane.showInputDialog("Indtast navn for spiller 1"); 
-		playerTwoName = JOptionPane.showInputDialog("Indtast navn for spiller 2");
 	}
 
 	
