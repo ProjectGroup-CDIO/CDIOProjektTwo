@@ -84,7 +84,13 @@ public void game(){
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
 			if(player1.playerAcc.balance==0){
-				
+				playerOneLoss = true;
+			}
+			if (player1.playerAcc.balance>=3000){
+				playerOneVic = true;
+			}
+			if(playerTwoVic && playerTwoLoss){
+				game = false;
 			}
 		}
 		
@@ -97,6 +103,15 @@ public void game(){
 			GUI.setCar(trow, playerTwoName); 
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
+			if(player2.playerAcc.balance==0){
+				playerTwoLoss = true;
+			}
+			if (player2.playerAcc.balance>=3000){
+				playerTwoVic = true;
+			}
+			if(playerOneVic && playerOneLoss){
+				game = false;
+			}
 		}
 		
 		if(trow==7){
