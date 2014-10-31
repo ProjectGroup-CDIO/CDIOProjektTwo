@@ -62,12 +62,6 @@ public void game(){
 	GUI.addPlayer(playerTwoName, player2.playerAcc.balance, 255, 255, 255); //last three arguments are RGB-color
 	GUI.addPlayer(playerOneName, player1.playerAcc.balance, 0, 0, 0);	    
 	
-	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
-	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
-	
-	
-	
-	
 	
 	while(game) {
 		
@@ -114,7 +108,6 @@ public void game(){
 	
 	}
 	
-//deleting the Feilds from Game
 	}
 
 }
