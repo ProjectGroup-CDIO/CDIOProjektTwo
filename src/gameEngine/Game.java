@@ -83,23 +83,27 @@ public void game(){
 		int trow=dieOne.faceValue+dieTwo.faceValue;
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 		if(playerOne) {
-			GUI.removeCar(trow, playerTwoName);
+			GUI.removeAllCars(playerTwoName);
 			GUI.setCar(1, playerTwoName);
+			GUI.removeCar(1, playerOneName);
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
-			GUI.showMessage("PlayerTwos turn");
-			playerTwo = true;
+			//GUI.showMessage("PlayerTwos turn");
 		}
 		if(playerTwo) {
-			GUI.removeCar(trow, playerOneName);
+			GUI.removeAllCars(playerOneName);
 			GUI.setCar(1, playerOneName);
+			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
-			GUI.showMessage("PlayerOnes turn");
+			//GUI.showMessage("PlayerOnes turn");
+		}
+		if(playerOne){
+			playerTwo =true;
+		}
+		if(playerTwo){
 			playerOne = true;
 		}
-	
-	
 	
 	}
 	
