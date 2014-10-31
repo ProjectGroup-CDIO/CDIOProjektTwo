@@ -9,9 +9,6 @@ public class Game {
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
 	
-	/*int playerOnePoints = player1.playerAcc.balance;
-	int playerTwoPoints = player2.playerAcc.balance;
-	*/
 	int RollOne = 0;
 	int RollTwo = 0;
 	
@@ -81,8 +78,8 @@ public void game(){
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
-			//GUI.showMessage("PlayerTwos turn");
 		}
+		
 		if(playerTwo) {
 			GUI.removeAllCars(playerOneName);
 			GUI.setCar(1, playerOneName);
@@ -92,8 +89,8 @@ public void game(){
 			GUI.setCar(trow, playerTwoName); 
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
 			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
-			//GUI.showMessage("PlayerOnes turn");
 		}
+		
 		if(trow==7){
 			continue;
 		}
