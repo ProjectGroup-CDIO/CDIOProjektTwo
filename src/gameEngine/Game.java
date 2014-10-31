@@ -66,12 +66,6 @@ public void game(){
 	Player player2 = new Player("PlayerTwo");
 			
 	
-	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
-	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
-	
-	
-	
-	
 	
 	while(game) {
 		
@@ -116,7 +110,6 @@ public void game(){
 	
 	}
 	
-//deleting the Feilds from Game
 	}
 
 }
