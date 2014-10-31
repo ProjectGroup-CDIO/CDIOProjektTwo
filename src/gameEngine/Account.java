@@ -2,7 +2,7 @@ package gameEngine;
 
 public class Account {
 
-	private int balance;
+	int balance;
 
 	public Account() {
 		balance = 1000;

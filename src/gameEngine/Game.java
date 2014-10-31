@@ -6,9 +6,12 @@ import boundaryToMatador.GUI;
 
 public class Game {
 	
-	int playerOnePoints = 1000;
-	int playerTwoPoints = 1000;
+	Player player1 = new Player("PlayerOne");
+	Player player2 = new Player("PlayerTwo");
 	
+	/*int playerOnePoints = player1.playerAcc.balance;
+	int playerTwoPoints = player2.playerAcc.balance;
+	*/
 	int RollOne = 0;
 	int RollTwo = 0;
 	
@@ -56,15 +59,8 @@ public void game(){
 	Die dieOne = new Die();
 	Die dieTwo = new Die();
 	
-	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); //last three arguments are RGB-color
-	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	    
-	
-
-	
-
-	Player player1 = new Player("PlayerOne");
-	Player player2 = new Player("PlayerTwo");
-			
+	GUI.addPlayer(playerTwoName, player2.playerAcc.balance, 255, 255, 255); //last three arguments are RGB-color
+	GUI.addPlayer(playerOneName, player1.playerAcc.balance, 0, 0, 0);	    
 	
 	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
 	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
@@ -90,6 +86,7 @@ public void game(){
 			GUI.removeCar(1, playerOneName);
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			GUI.setBalance(playerOneName, player1.playerAcc.balance);
 			//GUI.showMessage("PlayerTwos turn");
 		}
 		if(playerTwo) {
@@ -100,6 +97,7 @@ public void game(){
 			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
 			//GUI.showMessage("PlayerOnes turn");
 		}
 		if(trow==7){
