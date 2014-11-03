@@ -152,6 +152,17 @@ public void game(){
 			GUI.showMessage(playerTwoName+" Won");
 			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
 		}
+		if (playerOneLoss && playerTwoLoss){
+			GUI.showMessage("Draw");
+		}
+		else if (playerOneLoss && !playerTwoLoss){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		else if (!playerOneLoss && playerTwoLoss){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
 		
 	}
 
