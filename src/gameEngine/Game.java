@@ -147,22 +147,22 @@ public void game(){
 		}
 		else if (playerOneVic && !playerTwoVic){
 			GUI.showMessage(playerOneName+" Won");
-			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			GUI.addPlayer(playerOneName+" is the winner!!!", player1.playerAcc.balance, 0, 0, 0);
 		}
 		else if (playerTwoVic && !playerOneVic){
 			GUI.showMessage(playerTwoName+" Won");
-			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			GUI.addPlayer(playerTwoName+" is the winner!!!", player2.playerAcc.balance, 255, 255, 255);
 		}
 		if (playerOneLoss && playerTwoLoss){
 			GUI.showMessage("Draw");
 		}
 		else if (playerOneLoss && !playerTwoLoss){
 			GUI.showMessage(playerTwoName+" Won");
-			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			GUI.addPlayer(playerTwoName+" is the winner!!!", player2.playerAcc.balance, 255, 255, 255);
 		}
 		else if (!playerOneLoss && playerTwoLoss){
 			GUI.showMessage(playerOneName+" Won");
-			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			GUI.addPlayer(playerOneName+" is the winner!!!", player1.playerAcc.balance, 0, 0, 0);
 		}
 		
 	}
