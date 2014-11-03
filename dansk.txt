@@ -11,7 +11,7 @@
 	foregroundColor::0,,0,,0;;
 	title::TAARN;;
 	subText::Faa 250 Gold;; 
-	description::TAARN: Velkommen til Taarnet, foel dig fri til at tage hvadend du kan. Pas på dragen!!!;;
+	description::TAARN: Velkommen til Taarnet, foel dig fri til at tage hvadend du kan. Pas paa dragen!!!;;
 	leje:: ;;
 ||		
 	type::Street;;
@@ -27,7 +27,7 @@
 	foregroundColor::0,,0,,0;;
 	title::PALADSETS INDGANG;;
 	subText::Betal 100 Gold;;  
-	description::PALADSETS INDGANG: Bank på, og betal vaaben-beskatning;;
+	description::PALADSETS INDGANG: Bank paa, og betal vaaben-beskatning;;
 	leje:: ;;
 ||	
 	type::Street;;
@@ -42,7 +42,7 @@
 	backgroundColor::11,,137,,255;;
 	foregroundColor::0,,0,,0;;
 	title::BEMURET BY;;
-	subText::Få 180 Gold;;  
+	subText::Faa 180 Gold;;  
 	description::BEMURET BY: Du formaar at snige dig ind bag byens mure. Fyld lommerne!!! ;;
 	leje:: ;;
 ||		
@@ -50,7 +50,7 @@
 	backgroundColor::11,,223,,255;;
 	foregroundColor::0,,0,,0;;
 	title::KLOSTER;;
-	subText::Få 0 Gold;; 
+	subText::Faa 0 Gold;; 
 	description::KLOSTER: Munkene og nonnerne har intet at tilbyde. Fortsaet!;;
 	leje:: ;;
 ||	
@@ -90,6 +90,6 @@
 	backgroundColor::255,,153,,11;;
 	foregroundColor::0,,0,,0;;
 	title::GULDMINE;; 
-	subText::Få 650 Gold;; 
-	description::GULDMINE: Wow! Du fandt guldminen. Stedet er styret af hårdtarbejdende nisser.;;
+	subText::Faa 650 Gold;; 
+	description::GULDMINE: Wow! Du fandt guldminen. Stedet er styret af hardtarbejdende nisser.;;
 	leje:: ;;
