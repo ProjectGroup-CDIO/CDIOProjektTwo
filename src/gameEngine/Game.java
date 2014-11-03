@@ -41,7 +41,7 @@ public class Game {
 				"The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
 				choices, 
 				choices[1]); 
-		
+
 		//System.out.println(input);
 
 		//language selection, changes variables and sets the game board language.
@@ -63,6 +63,9 @@ public class Game {
 			draw = "Draw";
 		}
 
+
+
+
 		//User names are prompted from the users, and store in previous variables
 		playerOneName = GUI.getUserString(typeNameOne);
 		playerTwoName = GUI.getUserString(typeNameTwo);
@@ -82,7 +85,7 @@ public class Game {
 		while(game) {
 			//user prompted button, when pressed the value of rollDice is stored in i.
 			i = GUI.getUserButtonPressed(null, rollDice);
-
+			
 			if(i.equals(rollDice)){
 				dieOne.rollDie();
 				dieTwo.rollDie();
@@ -90,7 +93,7 @@ public class Game {
 				GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 
 				if(playerOne) {
-					GUI.removeAllCars(playerOneName);//In case of throw == 7
+					GUI.removeAllCars(playerOneName);
 					GUI.setCar(1, playerOneName);
 					GUI.removeAllCars(playerTwoName);
 					GUI.setCar(1, playerTwoName);
@@ -113,7 +116,7 @@ public class Game {
 				if(playerTwo) {
 					GUI.removeAllCars(playerOneName);
 					GUI.setCar(1, playerOneName);
-					GUI.removeAllCars(playerTwoName);//In case of trow == 
+					GUI.removeAllCars(playerTwoName);
 					GUI.setCar(1, playerTwoName);
 					GUI.removeCar(1, playerTwoName);
 					GUI.setCar(trow, playerTwoName); 
@@ -151,11 +154,11 @@ public class Game {
 			if (playerOneVic && playerTwoVic){
 				if (player1.playerAcc.balance > player2.playerAcc.balance){
 					GUI.showMessage(playerOneName+won);
-					GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
+					GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
 				}
 				else if (player1.playerAcc.balance < player2.playerAcc.balance){
 					GUI.showMessage(playerTwoName+won);
-					GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
+					GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
 				}
 				else if (player1.playerAcc.balance == player2.playerAcc.balance){
 					GUI.showMessage(draw);
@@ -163,23 +166,23 @@ public class Game {
 			}
 			else if (playerOneVic && !playerTwoVic){
 				GUI.showMessage(playerOneName+won);
-				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
+				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
 			}
 			else if (playerTwoVic && !playerOneVic){
 				GUI.showMessage(playerTwoName+won);
-				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
+				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
 			}
 			if (playerOneLoss && playerTwoLoss){
 				GUI.showMessage(draw);
 			}
 			else if (playerOneLoss && !playerTwoLoss){
 				GUI.showMessage(playerTwoName+won);
-				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
+				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
 			}
 			else if (!playerOneLoss && playerTwoLoss){
 
 				GUI.showMessage(playerOneName+won);
-				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
+				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
 
 			}
 
