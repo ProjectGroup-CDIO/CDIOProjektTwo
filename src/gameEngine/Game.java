@@ -115,7 +115,7 @@ public void game(){
 			}
 		}
 		
-		if(trow==7){
+		if(trow==10){
 			continue;
 		}
 		else if(playerOne){
