@@ -105,9 +105,9 @@ public class Fields {
 				}
 				return "The Goldmine";
 			}
-			else return "Der skal slås mellem 2-12";
+			else return "There must be rolled a valid dice";
 
-		}else return "Skriv Roll Dice";
+		}else return "Roll Dice";
 	}
 
 }
