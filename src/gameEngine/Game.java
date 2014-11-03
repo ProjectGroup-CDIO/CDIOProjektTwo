@@ -21,6 +21,13 @@ public class Game {
 	boolean playerTwo = false;
 	boolean game = true;
 
+	//Language used in the code, will be changed by the language setting.
+	String typeNameOne = ""; 
+	String typeNameTwo = "";
+	String rollDice = "";
+	String won = "";
+	String isWinner = "";
+	String draw = "";
 
 
 	public void game(){
@@ -35,31 +42,17 @@ public class Game {
 				choices[1]); 
 		System.out.println(input);
 
+		//language selection, changes variables and sets the game board language.
 		if(input.equals("Dansk")){
 			GUI.create("dansk.txt");
-		}
-		else if(input.equals("English")){
-			GUI.create("fields2.txt");
-		}
-
-		String typeNameOne = ""; 
-		String typeNameTwo = "";
-		String rollDice = "";
-		String won = "";
-		String isWinner = "";
-		String draw = "";
-
-
-		//language selection variables are created
-		if(input.equals("Dansk")){
 			typeNameOne = "Indtast navn spiller 1"; 
 			typeNameTwo = "Indtast navn spiller 2";
 			rollDice = "Kast Terning";
 			won = " vandt";
 			isWinner = " er vinderen";
 			draw = "Uafgjort";
-
 		}else if(input.equals("English")){
+			GUI.create("fields2.txt");
 			typeNameOne = "Type name of player 1";
 			typeNameTwo = "Type name of player 2";
 			rollDice = "Roll Dice";
@@ -67,7 +60,7 @@ public class Game {
 			isWinner = " is the winner";
 			draw = "Draw";
 		}
-
+		
 
 		playerOneName = GUI.getUserString(typeNameOne);
 
