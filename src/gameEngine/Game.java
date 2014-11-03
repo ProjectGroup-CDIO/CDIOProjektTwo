@@ -74,6 +74,7 @@ public void game(){
 		dieTwo.rollDie();
 		int trow=dieOne.faceValue+dieTwo.faceValue;
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
+		
 		if(playerOne) {
 			GUI.removeAllCars(playerOneName);//In case of throw == 7
 			GUI.setCar(1, playerOneName);
@@ -81,7 +82,7 @@ public void game(){
 			GUI.setCar(1, playerTwoName);
 			GUI.removeCar(1, playerOneName);
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
-			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			Fields.field(player1, trow, i);
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
 			if(player1.playerAcc.balance==0){
 				playerOneLoss = true;
@@ -101,7 +102,7 @@ public void game(){
 			GUI.setCar(1, playerTwoName);
 			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
-			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			Fields.field(player2, trow, i);
 			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
 			if(player2.playerAcc.balance==0){
 				playerTwoLoss = true;

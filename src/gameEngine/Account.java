@@ -3,6 +3,10 @@ package gameEngine;
 public class Account {
 
 	int balance;
+	
+	public Account(int balance) {
+		this.balance = balance;
+	}
 
 	public Account() {
 		balance = 1000;

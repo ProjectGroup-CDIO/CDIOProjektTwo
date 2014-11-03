@@ -2,28 +2,41 @@ package gameEngine;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
-public class TestsAccount {
+import automat.Billetautomat;
 
+public class TestsAccount {
+	
+	Account acc1;
+	
+	@Before
+	public void setUp() throws Exception {
+		acc1 = new Account();
+	}
+	
 	@Test
 	public void testAccount() {
-		fail("Not yet implemented");
+		assertEquals(1000, acc1.getBalance());
 	}
 
 	@Test
 	public void testDeposit() {
-		fail("Not yet implemented");
+		acc1.deposit(100);
+		assertEquals(1100, acc1.getBalance());
 	}
 
 	@Test
 	public void testWithdraw() {
-		fail("Not yet implemented");
+		acc1.withdraw(100);
+		assertEquals(900, acc1.getBalance());
 	}
 
 	@Test
 	public void testGetBalance() {
-		fail("Not yet implemented");
+		acc1.setBalance(10000);
+		assertEquals(10000, acc1.getBalance());
 	}
 
 	@Test
