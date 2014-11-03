@@ -14,9 +14,6 @@ public class Game {
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
 
-	int RollOne = 0;
-	int RollTwo = 0;
-
 	boolean playerOne = true;
 	boolean playerTwo = false;
 	boolean game = true;
@@ -61,15 +58,10 @@ public class Game {
 			draw = "Draw";
 		}
 
-
 		playerOneName = GUI.getUserString(typeNameOne);
-
 		playerTwoName = GUI.getUserString(typeNameTwo);
 
-
-
 		String i = "";
-
 
 		Die dieOne = new Die();
 		Die dieTwo = new Die();
@@ -112,7 +104,7 @@ public class Game {
 				if(playerTwo) {
 					GUI.removeAllCars(playerOneName);
 					GUI.setCar(1, playerOneName);
-					GUI.removeAllCars(playerTwoName);//In case of trow == 
+					GUI.removeAllCars(playerTwoName);//In case of trow == 10
 					GUI.setCar(1, playerTwoName);
 					GUI.removeCar(1, playerTwoName);
 					GUI.setCar(trow, playerTwoName); 
