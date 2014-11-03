@@ -31,16 +31,18 @@ public class Game {
 
 
 	public void game(){
-
+		//variables created for storing the users names for the game
 		String playerOneName = ""; 
 		String playerTwoName = ""; 
-
+		//The choices of languages that can be used
 		String[] choices = { "English", "Dansk"};
+		//Selection box in which the user has to choose language
 		String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
 				"The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
 				choices, 
 				choices[1]); 
-		System.out.println(input);
+		
+		//System.out.println(input);
 
 		//language selection, changes variables and sets the game board language.
 		if(input.equals("Dansk")){
@@ -60,26 +62,25 @@ public class Game {
 			isWinner = " is the winner";
 			draw = "Draw";
 		}
-		
 
+		//User names are prompted from the users, and store in previous variables
 		playerOneName = GUI.getUserString(typeNameOne);
-
 		playerTwoName = GUI.getUserString(typeNameTwo);
 
 
-
+		//variable used to store the button pressed value
 		String i = "";
-
-
+		//Dices to be rolled are created.
 		Die dieOne = new Die();
 		Die dieTwo = new Die();
 
+		//adds player cars to the
 		GUI.addPlayer(playerTwoName, player2.playerAcc.balance, 255, 255, 255); //last three arguments are RGB-color
 		GUI.addPlayer(playerOneName, player1.playerAcc.balance, 0, 0, 0);	    
 
 
 		while(game) {
-
+			//user prompted button, when pressed the value of rollDice is stored in i.
 			i = GUI.getUserButtonPressed(null, rollDice);
 
 			if(i.equals(rollDice)){
