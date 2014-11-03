@@ -40,9 +40,38 @@ public class TestsFields {
 	assertEquals(testPlay.playerAcc.balance,1180);
 	}
 	
-	@Test //Monestary testx
+	@Test //Monestary test
 	public void testMonestary() {
 	Fields.field(testPlay, 7, "Roll Dice");
 	assertEquals(testPlay.playerAcc.balance,1000);
+	}
+	@Test //Black cave test
+	public void testBlackCave() {
+	Fields.field(testPlay, 8, "Roll Dice");
+	assertEquals(testPlay.playerAcc.balance,930);
+	}
+	@Test //huts in the mountain
+	public void testhuts() {
+	Fields.field(testPlay, 9, "Roll Dice");
+	assertEquals(testPlay.playerAcc.balance,940);
+	}
+	@Test //werewall test
+	public void testWerewall() {
+	Fields.field(testPlay, 10, "Roll Dice");
+	assertEquals(testPlay.playerAcc.balance,920);
+	}
+	@Test //The pit test
+	public void testThePit() {
+	Fields.field(testPlay, 11, "Roll Dice");
+	assertEquals(testPlay.playerAcc.balance,910);
+	}
+	@Test //The goldmine test
+	public void testTheGoldmine() {
+	Fields.field(testPlay, 12, "Roll Dice");
+	assertEquals(testPlay.playerAcc.balance,1650);
+	}
+	@Test //fejl i input af string i
+	public void testFejl() {
+	assertEquals(Fields.field(testPlay, 12, "Roll D"),"Roll Dice not recieved properly");		
 	}
 }
