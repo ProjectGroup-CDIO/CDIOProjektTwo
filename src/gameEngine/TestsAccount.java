@@ -16,7 +16,7 @@ public class TestsAccount {
 	
 	@Test
 	public void testAccount() {
-	assertEquals(1000, acc1.getBalance());
+	assertEquals(1000, acc1.getBalance()); //test whether the account is instantiated with balanca = 1000
 
 	}
 
@@ -33,19 +33,16 @@ public class TestsAccount {
 	}
 
 	@Test
-	public void testGetBalance() {
+	public void testSetBalance() {
 		acc1.setBalance(10000);
 		assertEquals(10000, acc1.getBalance());
 	}
 
 	@Test
-	public void testSetBalance() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testToString() {
-		fail("Not yet implemented");
+		acc1.setBalance(5500);
+		System.out.println(acc1);
+		assertTrue(acc1.toString().equals("balance: "+5500));
 	}
 
 }

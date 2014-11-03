@@ -42,16 +42,33 @@ public void game(){
 		GUI.create("fields2.txt");
 	}
 	
+	String typeName = ""; 
+	String rollDice = "";
+	String won = "";
+	String isWinner = "";
+	String draw = "";
+	int j = 1;
 	
+	//language selection variables are created
 	if(input.equals("Dansk")){
-		playerOneName = GUI.getUserString("Indtast Navn - Spiller 1");
-		playerTwoName = GUI.getUserString("Indtast Navn - Spiller 2");
-
-	}else if(input.equals("English")){
-		playerOneName = GUI.getUserString("Type name - Player 1");
-		playerTwoName = GUI.getUserString("Type name - Player 2");
+		typeName = "Indtast navn på spiller "+j; //j is used for counting player number
+		rollDice = "Kast Terning";
+		won = " vandt";
+		isWinner = " er vinderen";
+		draw = "Uafgjort";
 		
+	}else if(input.equals("English")){
+		typeName = "Type name of player "+j;
+		rollDice = "Roll Dice";
+		won = " won";
+		isWinner = " is the winner";
+		draw = "Draw";
 	}
+	
+	
+	playerOneName = GUI.getUserString(typeName);
+	j++; //increment in order to get player 2
+	playerTwoName = GUI.getUserString(typeName);
 	
 	
 	
@@ -67,9 +84,9 @@ public void game(){
 	
 	while(game) {
 		
-		i = GUI.getUserButtonPressed(null, "Roll Dice");
+		i = GUI.getUserButtonPressed(null, rollDice);
 	
-	if(i.equals("Roll Dice")){
+	if(i.equals(rollDice)){
 		dieOne.rollDie();
 		dieTwo.rollDie();
 		int trow=dieOne.faceValue+dieTwo.faceValue;
@@ -134,35 +151,35 @@ public void game(){
 		
 		if (playerOneVic && playerTwoVic){
 			if (player1.playerAcc.balance > player2.playerAcc.balance){
-				GUI.showMessage(playerOneName+" Won");
-				GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+				GUI.showMessage(playerOneName+won);
+				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
 			}
 			else if (player1.playerAcc.balance < player2.playerAcc.balance){
-				GUI.showMessage(playerTwoName+" Won");
-				GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+				GUI.showMessage(playerTwoName+won);
+				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
 			}
 			else if (player1.playerAcc.balance == player2.playerAcc.balance){
-				GUI.showMessage("Draw");
+				GUI.showMessage(draw);
 			}
 		}
 		else if (playerOneVic && !playerTwoVic){
-			GUI.showMessage(playerOneName+" Won");
-			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			GUI.showMessage(playerOneName+won);
+			GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
 		}
 		else if (playerTwoVic && !playerOneVic){
-			GUI.showMessage(playerTwoName+" Won");
-			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			GUI.showMessage(playerTwoName+won);
+			GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
 		}
 		if (playerOneLoss && playerTwoLoss){
-			GUI.showMessage("Draw");
+			GUI.showMessage(draw);
 		}
 		else if (playerOneLoss && !playerTwoLoss){
-			GUI.showMessage(playerTwoName+" Won");
-			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			GUI.showMessage(playerTwoName+won);
+			GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
 		}
 		else if (!playerOneLoss && playerTwoLoss){
-			GUI.showMessage(playerOneName+" Won");
-			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			GUI.showMessage(playerOneName+won);
+			GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
 		}
 		
 	}
