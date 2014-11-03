@@ -28,7 +28,7 @@ public class Fields {
 			}else
 			if(trow==7){
 				player.playerAcc.withdraw(0);
-				return "Monastrery";
+				return "Monastery";
 			}else
 			if(trow==8){
 				player.playerAcc.withdraw(70);
@@ -50,9 +50,9 @@ public class Fields {
 				player.playerAcc.deposit(650);
 				return "The Goldmine";
 			}
-			else return "Der skal slås mellem 2-12";
+			else return "There must be rolled a valid dice";
 
-		}else return "Roll Dice";
+		}else return "Roll Dice not recieved properly";
 	}
 }
 

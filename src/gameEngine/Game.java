@@ -115,7 +115,7 @@ public void game(){
 		if(playerTwo) {
 			GUI.removeAllCars(playerOneName);
 			GUI.setCar(1, playerOneName);
-			GUI.removeAllCars(playerTwoName);//In case of trow == 7
+			GUI.removeAllCars(playerTwoName);//In case of trow == 
 			GUI.setCar(1, playerTwoName);
 			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
@@ -132,12 +132,12 @@ public void game(){
 			}
 		}
 		
-		if(trow==7){
+		if(trow==10){
 			continue;
 		}
 		else if(playerOne){
 			playerOne = false;
-			playerTwo =true;
+			playerTwo = true;
 		}
 		else if(playerTwo){
 			playerOne = true;
@@ -178,8 +178,10 @@ public void game(){
 			GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance);
 		}
 		else if (!playerOneLoss && playerTwoLoss){
+
 			GUI.showMessage(playerOneName+won);
 			GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance);
+
 		}
 		
 	}
