@@ -42,23 +42,26 @@ public void game(){
 		GUI.create("fields2.txt");
 	}
 	
-	String typeName = ""; 
+	String typeNameOne = ""; 
+	String typeNameTwo = "";
 	String rollDice = "";
 	String won = "";
 	String isWinner = "";
 	String draw = "";
-	int j = 1;
+	
 	
 	//language selection variables are created
 	if(input.equals("Dansk")){
-		typeName = "Indtast navn på spiller "+j; //j is used for counting player number
+		typeNameOne = "Indtast navn spiller 1"; 
+		typeNameTwo = "Indtast navn spiller 2";
 		rollDice = "Kast Terning";
 		won = " vandt";
 		isWinner = " er vinderen";
 		draw = "Uafgjort";
 		
 	}else if(input.equals("English")){
-		typeName = "Type name of player "+j;
+		typeNameOne = "Type name of player 1";
+		typeNameTwo = "Type name of player 2";
 		rollDice = "Roll Dice";
 		won = " won";
 		isWinner = " is the winner";
@@ -66,9 +69,9 @@ public void game(){
 	}
 	
 	
-	playerOneName = GUI.getUserString(typeName);
-	j++; //increment in order to get player 2
-	playerTwoName = GUI.getUserString(typeName);
+	playerOneName = GUI.getUserString(typeNameOne);
+	
+	playerTwoName = GUI.getUserString(typeNameTwo);
 	
 	
 	
