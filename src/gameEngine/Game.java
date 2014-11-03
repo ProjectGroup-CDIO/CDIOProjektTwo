@@ -75,6 +75,7 @@ public void game(){
 		int trow=dieOne.faceValue+dieTwo.faceValue;
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 		if(playerOne) {
+			trow = 12;
 			GUI.removeAllCars(playerOneName);//In case of throw == 7
 			GUI.setCar(1, playerOneName);
 			GUI.removeAllCars(playerTwoName);
@@ -128,6 +129,31 @@ public void game(){
 	
 	}
 	
+	}
+	if (game != true){
+		
+		if (playerOneVic && playerTwoVic){
+			if (player1.playerAcc.balance > player2.playerAcc.balance){
+				GUI.showMessage(playerOneName+" Won");
+				GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance < player2.playerAcc.balance){
+				GUI.showMessage(playerTwoName+" Won");
+				GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance == player2.playerAcc.balance){
+				GUI.showMessage("Draw");
+			}
+		}
+		else if (playerOneVic && !playerTwoVic){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
+		else if (playerTwoVic && !playerOneVic){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		
 	}
 
 }
