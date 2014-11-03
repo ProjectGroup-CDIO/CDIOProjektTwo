@@ -70,4 +70,8 @@ public class TestsFields {
 	Fields.field(testPlay, 12, "Roll Dice");
 	assertEquals(testPlay.playerAcc.balance,1650);
 	}
+	@Test //fejl i input af string i
+	public void testFejl() {
+	assertEquals(Fields.field(testPlay, 12, "Roll D"),"Roll Dice not recieved properly");		
+	}
 }

@@ -52,7 +52,7 @@ public class Fields {
 			}
 			else return "There must be rolled a valid dice";
 
-		}else return "Roll Dice";
+		}else return "Roll Dice not recieved properly";
 	}
 }
 
