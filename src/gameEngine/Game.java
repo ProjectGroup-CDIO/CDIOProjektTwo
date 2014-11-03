@@ -120,7 +120,7 @@ public void game(){
 		}
 		else if(playerOne){
 			playerOne = false;
-			playerTwo =true;
+			playerTwo = true;
 		}
 		else if(playerTwo){
 			playerOne = true;
@@ -135,11 +135,11 @@ public void game(){
 		if (playerOneVic && playerTwoVic){
 			if (player1.playerAcc.balance > player2.playerAcc.balance){
 				GUI.showMessage(playerOneName+" Won");
-				GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+				GUI.addPlayer(playerOneName+" is the winner!!!", player1.playerAcc.balance, 0, 0, 0);
 			}
 			else if (player1.playerAcc.balance < player2.playerAcc.balance){
 				GUI.showMessage(playerTwoName+" Won");
-				GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+				GUI.addPlayer(playerTwoName+" is the winner!!!", player2.playerAcc.balance, 255, 255, 255);
 			}
 			else if (player1.playerAcc.balance == player2.playerAcc.balance){
 				GUI.showMessage("Draw");
