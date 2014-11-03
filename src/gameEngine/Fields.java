@@ -28,7 +28,7 @@ public class Fields {
 			}else
 			if(trow==7){
 				player.playerAcc.withdraw(0);
-				return "Monastrery";
+				return "Monastery";
 			}else
 			if(trow==8){
 				player.playerAcc.withdraw(70);
