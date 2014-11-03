@@ -2,7 +2,7 @@ package gameEngine;
 
 public class Account {
 
-	private int balance;
+	int balance;
 
 	public Account() {
 		balance = 1000;
@@ -19,7 +19,11 @@ public class Account {
 		if(amount<=balance) {
 			balance -= amount;
 			return "Withdrawal succesful";
-		} else return "Withdrawal unsuccesful. Cannot withdraw amount larger than balance ";
+		} else if(amount>balance){
+			balance = 0;
+			return "Withdrawal unsuccesful. Cannot withdraw amount larger than balance ";
+		}
+		return "";
 	}
 
 	public int getBalance() {

@@ -6,8 +6,13 @@ import boundaryToMatador.GUI;
 
 public class Game {
 	
-	int playerOnePoints = 1000;
-	int playerTwoPoints = 1000;
+	boolean playerOneVic = false;
+	boolean playerTwoVic = false;
+	boolean playerOneLoss = false;
+	boolean playerTwoLoss = false;
+	
+	Player player1 = new Player("PlayerOne");
+	Player player2 = new Player("PlayerTwo");
 	
 	int RollOne = 0;
 	int RollTwo = 0;
@@ -56,21 +61,8 @@ public void game(){
 	Die dieOne = new Die();
 	Die dieTwo = new Die();
 	
-	GUI.addPlayer(playerTwoName, playerTwoPoints, 255, 255, 255); //last three arguments are RGB-color
-	GUI.addPlayer(playerOneName, playerOnePoints, 0, 0, 0);	    
-	
-
-	
-
-	Player player1 = new Player("PlayerOne");
-	Player player2 = new Player("PlayerTwo");
-			
-	
-	//GUI.addPlayer("PlayerOne", PlayerOnePoints);
-	//GUI.addPlayer("PlayerTwo", PlayerTwoPoints);
-	
-	
-	
+	GUI.addPlayer(playerTwoName, player2.playerAcc.balance, 255, 255, 255); //last three arguments are RGB-color
+	GUI.addPlayer(playerOneName, player1.playerAcc.balance, 0, 0, 0);	    
 	
 	
 	while(game) {
@@ -83,27 +75,59 @@ public void game(){
 		int trow=dieOne.faceValue+dieTwo.faceValue;
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 		if(playerOne) {
-			GUI.removeCar(trow, playerTwoName);
+			GUI.removeAllCars(playerOneName);//In case of throw == 7
+			GUI.setCar(1, playerOneName);
+			GUI.removeAllCars(playerTwoName);
 			GUI.setCar(1, playerTwoName);
+			GUI.removeCar(1, playerOneName);
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
-			GUI.showMessage("PlayerTwos turn");
-			playerTwo = true;
+			GUI.setBalance(playerOneName, player1.playerAcc.balance);
+			if(player1.playerAcc.balance==0){
+				playerOneLoss = true;
+			}
+			if (player1.playerAcc.balance>=3000){
+				playerOneVic = true;
+			}
+			if(playerTwoVic && playerTwoLoss){
+				game = false;
+			}
 		}
+		
 		if(playerTwo) {
-			GUI.removeCar(trow, playerOneName);
+			GUI.removeAllCars(playerOneName);
 			GUI.setCar(1, playerOneName);
+			GUI.removeAllCars(playerTwoName);//In case of trow == 7
+			GUI.setCar(1, playerTwoName);
+			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
 			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
-			GUI.showMessage("PlayerOnes turn");
-			playerOne = true;
+			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
+			if(player2.playerAcc.balance==0){
+				playerTwoLoss = true;
+			}
+			if (player2.playerAcc.balance>=3000){
+				playerTwoVic = true;
+			}
+			if(playerOneVic && playerOneLoss){
+				game = false;
+			}
 		}
-	
-	
+		
+		if(trow==7){
+			continue;
+		}
+		else if(playerOne){
+			playerOne = false;
+			playerTwo =true;
+		}
+		else if(playerTwo){
+			playerOne = true;
+			playerTwo = false;
+		}
 	
 	}
 	
-//deleting the Feilds from Game
 	}
 
 }
