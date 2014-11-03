@@ -103,6 +103,7 @@ public void game(){
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
 			if(player1.playerAcc.balance==0){
 				playerOneLoss = true;
+				trow = 0;
 			}
 			if (player1.playerAcc.balance>=3000){
 				playerOneVic = true;
@@ -123,6 +124,7 @@ public void game(){
 			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
 			if(player2.playerAcc.balance==0){
 				playerTwoLoss = true;
+				trow = 0;
 			}
 			if (player2.playerAcc.balance>=3000){
 				playerTwoVic = true;
