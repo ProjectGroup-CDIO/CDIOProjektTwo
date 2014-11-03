@@ -5,8 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import automat.Billetautomat;
-
 public class TestsAccount {
 	
 	Account acc1;
@@ -18,7 +16,8 @@ public class TestsAccount {
 	
 	@Test
 	public void testAccount() {
-		assertEquals(1000, acc1.getBalance());
+	assertEquals(1000, acc1.getBalance());
+
 	}
 
 	@Test

@@ -2,28 +2,37 @@ package gameEngine;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestsPlayer {
-
-	@Test
+	Player testPlay;
+	@Before
+	public void setup() throws Exception{
+	testPlay = new Player("PlayerOne");
+	}
+	
+	@Test //Checking if the contruct is properly made with the correct name.
 	public void testPlayer() {
-		fail("Not yet implemented");
+		
+		assertEquals(testPlay.name,"PlayerOne");
 	}
 
-	@Test
+	@Test //checks and sees if the name has been changed
 	public void testSetName() {
-		fail("Not yet implemented");
+		testPlay.setName("TestName");
+		assertEquals(testPlay.name,"TestName");
 	}
 
-	@Test
+	@Test //tests that the method returns the name of the initialized player
 	public void testGetName() {
-		fail("Not yet implemented");
+		assertEquals(testPlay.getName(),"PlayerOne");
 	}
 
-	@Test
+	@Test //tests to see if the playeracc is properly translated into a string
 	public void testToString() {
-		fail("Not yet implemented");
+		System.out.println(testPlay.toString());
+		assertTrue(testPlay.toString().contains("1000"));
 	}
 
 }

@@ -90,7 +90,7 @@ public void game(){
 			if (player1.playerAcc.balance>=3000){
 				playerOneVic = true;
 			}
-			if(playerTwoVic && playerTwoLoss){
+			if(playerTwoVic || playerTwoLoss){
 				game = false;
 			}
 		}
@@ -110,7 +110,7 @@ public void game(){
 			if (player2.playerAcc.balance>=3000){
 				playerTwoVic = true;
 			}
-			if(playerOneVic && playerOneLoss){
+			if(playerOneVic || playerOneLoss){
 				game = false;
 			}
 		}
@@ -129,6 +129,42 @@ public void game(){
 	
 	}
 	
+	}
+	if (game != true){
+		
+		if (playerOneVic && playerTwoVic){
+			if (player1.playerAcc.balance > player2.playerAcc.balance){
+				GUI.showMessage(playerOneName+" Won");
+				GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance < player2.playerAcc.balance){
+				GUI.showMessage(playerTwoName+" Won");
+				GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance == player2.playerAcc.balance){
+				GUI.showMessage("Draw");
+			}
+		}
+		else if (playerOneVic && !playerTwoVic){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
+		else if (playerTwoVic && !playerOneVic){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		if (playerOneLoss && playerTwoLoss){
+			GUI.showMessage("Draw");
+		}
+		else if (playerOneLoss && !playerTwoLoss){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		else if (!playerOneLoss && playerTwoLoss){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
+		
 	}
 
 }
