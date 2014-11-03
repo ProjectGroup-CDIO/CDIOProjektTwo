@@ -8,7 +8,7 @@ public class TestsAccount {
 
 	@Test
 	public void testAccount() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test

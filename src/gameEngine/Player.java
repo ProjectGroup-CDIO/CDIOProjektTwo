@@ -19,7 +19,7 @@ public class Player {
 	}
 	
 	public String toString() {
-		return name + "'s" + playerAcc.toString();
+		return name + "'s " + playerAcc.toString();
 	}
 	
 	
