@@ -74,6 +74,7 @@ public void game(){
 		dieTwo.rollDie();
 		int trow=dieOne.faceValue+dieTwo.faceValue;
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
+		
 		if(playerOne) {
 			GUI.removeAllCars(playerOneName);//In case of throw == 7
 			GUI.setCar(1, playerOneName);
@@ -81,7 +82,7 @@ public void game(){
 			GUI.setCar(1, playerTwoName);
 			GUI.removeCar(1, playerOneName);
 			GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
-			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			Fields.field(player1, trow, i);
 			GUI.setBalance(playerOneName, player1.playerAcc.balance);
 			if(player1.playerAcc.balance==0){
 				playerOneLoss = true;
@@ -89,7 +90,7 @@ public void game(){
 			if (player1.playerAcc.balance>=3000){
 				playerOneVic = true;
 			}
-			if(playerTwoVic && playerTwoLoss){
+			if(playerTwoVic || playerTwoLoss){
 				game = false;
 			}
 		}
@@ -101,7 +102,7 @@ public void game(){
 			GUI.setCar(1, playerTwoName);
 			GUI.removeCar(1, playerTwoName);
 			GUI.setCar(trow, playerTwoName); 
-			Fields.field(playerOne, playerTwo, player1, player2, trow, i);
+			Fields.field(player2, trow, i);
 			GUI.setBalance(playerTwoName, player2.playerAcc.balance);
 			if(player2.playerAcc.balance==0){
 				playerTwoLoss = true;
@@ -109,12 +110,12 @@ public void game(){
 			if (player2.playerAcc.balance>=3000){
 				playerTwoVic = true;
 			}
-			if(playerOneVic && playerOneLoss){
+			if(playerOneVic || playerOneLoss){
 				game = false;
 			}
 		}
 		
-		if(trow==7){
+		if(trow==10){
 			continue;
 		}
 		else if(playerOne){
@@ -128,6 +129,42 @@ public void game(){
 	
 	}
 	
+	}
+	if (game != true){
+		
+		if (playerOneVic && playerTwoVic){
+			if (player1.playerAcc.balance > player2.playerAcc.balance){
+				GUI.showMessage(playerOneName+" Won");
+				GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance < player2.playerAcc.balance){
+				GUI.showMessage(playerTwoName+" Won");
+				GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+			}
+			else if (player1.playerAcc.balance == player2.playerAcc.balance){
+				GUI.showMessage("Draw");
+			}
+		}
+		else if (playerOneVic && !playerTwoVic){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
+		else if (playerTwoVic && !playerOneVic){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		if (playerOneLoss && playerTwoLoss){
+			GUI.showMessage("Draw");
+		}
+		else if (playerOneLoss && !playerTwoLoss){
+			GUI.showMessage(playerTwoName+" Won");
+			GUI.addPlayer(playerTwoName+" is the winner", player2.playerAcc.balance);
+		}
+		else if (!playerOneLoss && playerTwoLoss){
+			GUI.showMessage(playerOneName+" Won");
+			GUI.addPlayer(playerOneName+" is the winner", player1.playerAcc.balance);
+		}
+		
 	}
 
 }
