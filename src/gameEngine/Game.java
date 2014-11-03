@@ -88,21 +88,24 @@ public class Game {
 				GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 
 				if(playerOne) {
-					GUI.removeAllCars(playerOneName);
-					GUI.setCar(1, playerOneName);
-					GUI.removeAllCars(playerTwoName);
+					GUI.removeAllCars(playerOneName);//In case of trow==10. Removes the player from the board.
+					GUI.setCar(1, playerOneName);//Sets the player at the first field
+					GUI.removeAllCars(playerTwoName);//Resets the postions of the other player
 					GUI.setCar(1, playerTwoName);
-					GUI.removeCar(1, playerOneName);
+					GUI.removeCar(1, playerOneName); //Removes the player. So the player can get a new postion
 					GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 					Fields.field(player1, trow, i);
 					GUI.setBalance(playerOneName, player1.playerAcc.balance);
+					//Sets the player to lose in case of 0 points
 					if(player1.playerAcc.balance==0){
 						playerOneLoss = true;
-						trow = 0;
+						trow = 0; //In order for a player not to get an extra turn by trow==10, when player have reached 0 points
 					}
+					//Sets the player to win in case of >= 3000 points
 					if (player1.playerAcc.balance>=3000){
 						playerOneVic = true;
 					}
+					//The game terminates if the other player won or lost during the players last turn
 					if(playerTwoVic || playerTwoLoss){
 						game = false;
 					}
@@ -112,7 +115,6 @@ public class Game {
 					GUI.removeAllCars(playerOneName);
 					GUI.setCar(1, playerOneName);
 					GUI.removeAllCars(playerTwoName);//In case of trow == 10
-					GUI.removeAllCars(playerTwoName);
 					GUI.setCar(1, playerTwoName);
 					GUI.removeCar(1, playerTwoName);
 					GUI.setCar(trow, playerTwoName); 
@@ -120,7 +122,7 @@ public class Game {
 					GUI.setBalance(playerTwoName, player2.playerAcc.balance);
 					if(player2.playerAcc.balance==0){
 						playerTwoLoss = true;
-						trow = 0;
+						trow = 0; //In order for a player not to get an extra turn by trow==10, when player have reached 0 points
 					}
 					if (player2.playerAcc.balance>=3000){
 						playerTwoVic = true;
@@ -129,7 +131,7 @@ public class Game {
 						game = false;
 					}
 				}
-
+				//The turn is not switched if a player rolls 10
 				if(trow==10){
 					continue;
 				}
@@ -146,7 +148,7 @@ public class Game {
 
 		}
 		if (game != true){
-
+			//If both player have reached >= 3000 points. The player with the most points win.
 			if (playerOneVic && playerTwoVic){
 				if (player1.playerAcc.balance > player2.playerAcc.balance){
 					GUI.showMessage(playerOneName+won);
@@ -156,6 +158,7 @@ public class Game {
 					GUI.showMessage(playerTwoName+won);
 					GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
 				}
+				//The game will end in a draw if both players have won and their points are equal
 				else if (player1.playerAcc.balance == player2.playerAcc.balance){
 					GUI.showMessage(draw);
 				}
