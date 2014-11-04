@@ -4,6 +4,8 @@ package gameEngine;
 import javax.swing.JOptionPane;
 
 import boundaryToMatador.GUI;
+import boundaryToMatador.Car; //til at oprette en bil
+import java.awt.Color; //til at farvegive uafgjort-bilen
 
 public class Game {
 
@@ -162,6 +164,13 @@ public class Game {
 				//The game will end in a draw if both players have won and their points are equal
 				else if (player1.getAccount().getBalance() == player2.getAccount().getBalance()){
 					GUI.showMessage(draw);
+					Car car = new Car.Builder()
+					.typeRacecar()
+					.primaryColor(Color.BLACK)
+					.secondaryColor(Color.WHITE)
+					.patternDiagonalDualColor()
+					.build();
+					GUI.addPlayer(draw, 0, car);
 				}
 			}
 			else if (playerOneVic && !playerTwoVic){
