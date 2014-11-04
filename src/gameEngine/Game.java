@@ -48,7 +48,7 @@ public class Game {
 			typeNameOne = "Indtast navn for spiller 1"; 
 			typeNameTwo = "Indtast navn for spiller 2";
 			rollDice = "Kast Terning";
-			won = " vandt";
+			won = " VANDT!!!";
 			isWinner = " ER VINDEREN!!!";
 			draw = "Uafgjort";
 		}else if(input.equals("English")){
@@ -56,7 +56,7 @@ public class Game {
 			typeNameOne = "Type name of player 1";
 			typeNameTwo = "Type name of player 2";
 			rollDice = "Roll Dice";
-			won = " won";
+			won = " WON!!!";
 			isWinner = " IS THE WINNER!!!";
 			draw = "Draw";
 		}
