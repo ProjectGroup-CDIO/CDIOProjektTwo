@@ -106,10 +106,7 @@ public class Game {
 					if (player1.playerAcc.balance>=3000){
 						playerOneVic = true;
 					}
-					//The game terminates if the other player won or lost during the players last turn
-					if(playerTwoVic || playerTwoLoss){
-						game = false;
-					}
+					 
 				}
 
 				if(playerTwo) {
@@ -128,7 +125,7 @@ public class Game {
 					if (player2.playerAcc.balance>=3000){
 						playerTwoVic = true;
 					}
-					if(playerOneVic || playerOneLoss){
+					if(playerOneVic || playerOneLoss || playerTwoVic || playerTwoLoss){
 						game = false;
 					}
 				}
