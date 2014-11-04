@@ -4,7 +4,7 @@ public class Player {
 	
 	String name;
 	
-	Account playerAcc = new Account(); 
+	private Account playerAcc = new Account(); 
 	
 	public Player(String name) {
 		this.name = name; 
@@ -21,7 +21,9 @@ public class Player {
 	public String toString() {
 		return name + "'s " + playerAcc.toString();
 	}
-	
+	public Account getAccount() {
+		return playerAcc;
+	}
 	
 
 }
