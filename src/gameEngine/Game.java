@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 import boundaryToMatador.GUI;
 import boundaryToMatador.Car; //til at oprette en bil
-import java.awt.Color; //til at farvegive uafgjort-bilen
+import java.awt.Color; //til at farvegive vinder/uafgjort bilerne
 
 public class Game {
 
