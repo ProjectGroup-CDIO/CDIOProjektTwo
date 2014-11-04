@@ -75,7 +75,7 @@
 	foregroundColor::0,,0,,0;;
 	title::THE WEREWALL;;
 	subText::Pay 80 Gold;; 
-	description::THE WEREWALL: You find yourself gazing upon the wall of werewolves. You find the strength to continue;;
+	description::THE WEREWALL: You find yourself gazing upon the wall of werewolves. You find the strength to continue - Throw again;;
 	leje:: ;;
 ||		
 	type::Street;;
