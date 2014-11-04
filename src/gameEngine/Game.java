@@ -93,7 +93,7 @@ public void game(){
 		GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
 		
 		if(playerOne) {
-			GUI.removeAllCars(playerOneName);//In case of throw == 7
+			GUI.removeAllCars(playerOneName);//In case of throw == 10
 			GUI.setCar(1, playerOneName);
 			GUI.removeAllCars(playerTwoName);
 			GUI.setCar(1, playerTwoName);
