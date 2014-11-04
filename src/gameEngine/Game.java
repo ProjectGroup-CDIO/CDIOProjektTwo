@@ -45,8 +45,8 @@ public class Game {
 		//language selection, changes variables and sets the game board language.
 		if(input.equals("Dansk")){
 			GUI.create("dansk.txt");
-			typeNameOne = "Indtast navn spiller 1"; 
-			typeNameTwo = "Indtast navn spiller 2";
+			typeNameOne = "Indtast navn for spiller 1"; 
+			typeNameTwo = "Indtast navn for spiller 2";
 			rollDice = "Kast Terning";
 			won = " vandt";
 			isWinner = " er vinderen";
