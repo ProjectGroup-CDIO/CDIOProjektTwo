@@ -48,7 +48,7 @@ public class Game {
 			typeNameTwo = "Indtast navn for spiller 2";
 			rollDice = "Kast Terning";
 			won = " vandt";
-			isWinner = " er vinderen";
+			isWinner = " ER VINDEREN!!!";
 			draw = "Uafgjort";
 		}else if(input.equals("English")){
 			GUI.create("fields2.txt");
@@ -56,7 +56,7 @@ public class Game {
 			typeNameTwo = "Type name of player 2";
 			rollDice = "Roll Dice";
 			won = " won";
-			isWinner = " is the winner";
+			isWinner = " IS THE WINNER!!!";
 			draw = "Draw";
 		}
 
