@@ -73,8 +73,8 @@ public class Game {
 		Die dieTwo = new Die();
 
 		//adds player cars to the
-		GUI.addPlayer(playerTwoName, player2.playerAcc.balance, 255, 255, 255); //last three arguments are RGB-color
-		GUI.addPlayer(playerOneName, player1.playerAcc.balance, 0, 0, 0);	    
+		GUI.addPlayer(playerTwoName, player2.getAccount().getBalance(), 255, 255, 255); //last three arguments are RGB-color
+		GUI.addPlayer(playerOneName, player1.getAccount().getBalance(), 0, 0, 0);	    
 
 
 		while(game) {
@@ -95,14 +95,14 @@ public class Game {
 					GUI.removeCar(1, playerOneName); //Removes the player. So the player can get a new postion
 					GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 					Fields.field(player1, trow, i);
-					GUI.setBalance(playerOneName, player1.playerAcc.balance);
+					GUI.setBalance(playerOneName, player1.getAccount().getBalance());
 					//Sets the player to lose in case of 0 points
-					if(player1.playerAcc.balance==0){
+					if(player1.getAccount().getBalance()==0){
 						playerOneLoss = true;
 						trow = 0; //In order for a player not to get an extra turn by trow==10, when player have reached 0 points
 					}
 					//Sets the player to win in case of >= 3000 points
-					if (player1.playerAcc.balance>=3000){
+					if (player1.getAccount().getBalance()>=3000){
 						playerOneVic = true;
 					}
 					//The game terminates if the other player won or lost during the players last turn
@@ -119,12 +119,12 @@ public class Game {
 					GUI.removeCar(1, playerTwoName);
 					GUI.setCar(trow, playerTwoName); 
 					Fields.field(player2, trow, i);
-					GUI.setBalance(playerTwoName, player2.playerAcc.balance);
-					if(player2.playerAcc.balance==0){
+					GUI.setBalance(playerTwoName, player2.getAccount().getBalance());
+					if(player2.getAccount().getBalance()==0){
 						playerTwoLoss = true;
 						trow = 0; //In order for a player not to get an extra turn by trow==10, when player have reached 0 points
 					}
-					if (player2.playerAcc.balance>=3000){
+					if (player2.getAccount().getBalance()>=3000){
 						playerTwoVic = true;
 					}
 					if(playerOneVic || playerOneLoss){
@@ -150,38 +150,38 @@ public class Game {
 		if (game != true){
 			//If both player have reached >= 3000 points. The player with the most points win.
 			if (playerOneVic && playerTwoVic){
-				if (player1.playerAcc.balance > player2.playerAcc.balance){
+				if (player1.getAccount().getBalance() > player2.getAccount().getBalance()){
 					GUI.showMessage(playerOneName+won);
-					GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
+					GUI.addPlayer(playerOneName+isWinner, player1.getAccount().getBalance(), 0, 0, 0);
 				}
-				else if (player1.playerAcc.balance < player2.playerAcc.balance){
+				else if (player1.getAccount().getBalance() < player2.getAccount().getBalance()){
 					GUI.showMessage(playerTwoName+won);
-					GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
+					GUI.addPlayer(playerTwoName+isWinner, player2.getAccount().getBalance(), 255, 255, 255);
 				}
 				//The game will end in a draw if both players have won and their points are equal
-				else if (player1.playerAcc.balance == player2.playerAcc.balance){
+				else if (player1.getAccount().getBalance() == player2.getAccount().getBalance()){
 					GUI.showMessage(draw);
 				}
 			}
 			else if (playerOneVic && !playerTwoVic){
 				GUI.showMessage(playerOneName+won);
-				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
+				GUI.addPlayer(playerOneName+isWinner, player1.getAccount().getBalance(), 0, 0, 0);
 			}
 			else if (playerTwoVic && !playerOneVic){
 				GUI.showMessage(playerTwoName+won);
-				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
+				GUI.addPlayer(playerTwoName+isWinner, player2.getAccount().getBalance(), 255, 255, 255);
 			}
 			if (playerOneLoss && playerTwoLoss){
 				GUI.showMessage(draw);
 			}
 			else if (playerOneLoss && !playerTwoLoss){
 				GUI.showMessage(playerTwoName+won);
-				GUI.addPlayer(playerTwoName+isWinner, player2.playerAcc.balance, 255, 255, 255);
+				GUI.addPlayer(playerTwoName+isWinner, player2.getAccount().getBalance(), 255, 255, 255);
 			}
 			else if (!playerOneLoss && playerTwoLoss){
 
 				GUI.showMessage(playerOneName+won);
-				GUI.addPlayer(playerOneName+isWinner, player1.playerAcc.balance, 0, 0, 0);
+				GUI.addPlayer(playerOneName+isWinner, player1.getAccount().getBalance(), 0, 0, 0);
 
 			}
 
