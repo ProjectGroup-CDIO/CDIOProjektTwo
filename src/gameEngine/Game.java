@@ -1,3 +1,4 @@
+
 package gameEngine;
 
 import javax.swing.JOptionPane;
@@ -43,20 +44,20 @@ public class Game {
 
 		//language selection, changes variables and sets the game board language.
 		if(input.equals("Dansk")){
-			GUI.create("dansk.txt");
-			typeNameOne = "Indtast navn spiller 1"; 
-			typeNameTwo = "Indtast navn spiller 2";
+			GUI.create("fields-Dansk.txt");
+			typeNameOne = "Indtast navn for spiller 1"; 
+			typeNameTwo = "Indtast navn for spiller 2";
 			rollDice = "Kast Terning";
-			won = " vandt";
-			isWinner = " er vinderen";
+			won = " VANDT!!!";
+			isWinner = " ER VINDEREN!!!";
 			draw = "Uafgjort";
 		}else if(input.equals("English")){
-			GUI.create("fields2.txt");
+			GUI.create("fields-English.txt");
 			typeNameOne = "Type name of player 1";
 			typeNameTwo = "Type name of player 2";
 			rollDice = "Roll Dice";
-			won = " won";
-			isWinner = " is the winner";
+			won = " WON!!!";
+			isWinner = " IS THE WINNER!!!";
 			draw = "Draw";
 		}
 
@@ -190,3 +191,4 @@ public class Game {
 	}
 
 }
+

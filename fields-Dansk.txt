@@ -73,9 +73,9 @@
 	type::Street;;
 	backgroundColor::166,,255,,11;;
 	foregroundColor::0,,0,,0;;
-	title::VARVAEGGEN;;
+	title::VARMUREN;;
 	subText::Betal 80 Gold;; 
-	description::VARVAEGGEN: Du griber dig selv i at maabe over Varulve-Vaeggen. Du finder styrken til at fortsaette.;;
+	description::VARMUREN: Du griber dig selv i at maabe over Varulve-Muren. Du finder styrken til at fortsaette - Kast igen;;
 	leje:: ;;
 ||		
 	type::Street;;
