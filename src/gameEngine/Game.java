@@ -55,8 +55,8 @@ public class Game {
 			draw = "SPILLET BLEV UAFGJORT";
 		}else if(input.equals("English")){
 			GUI.create("fields-English.txt");
-			typeNameOne = "Type name of player 1";
-			typeNameTwo = "Type name of player 2";
+			typeNameOne = "Enter name for player 1";
+			typeNameTwo = "Enter name for player 2";
 			rollDice = "Roll Dice";
 			won = " WON!!!";
 			isWinner = " IS THE WINNER!!!";
