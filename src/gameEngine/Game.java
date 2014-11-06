@@ -2,7 +2,6 @@
 package gameEngine;
 
 import javax.swing.JOptionPane;
-
 import boundaryToMatador.GUI;
 import boundaryToMatador.Car; //in order to create a custom car
 import java.awt.Color; //in order to change color of the car 
@@ -14,14 +13,14 @@ public class Game {
 	private boolean playerOneLoss = false;
 	private boolean playerTwoLoss = false;
 
-
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
+	
 	Language language = new Language(); 
 
-	boolean playerOne = true;
-	boolean playerTwo = false;
-	boolean game = true;
+	private boolean playerOne = true;
+	private boolean playerTwo = false;
+	private boolean game = true;
 
 	//Language used in the code, will be changed by the language setting.
 	private static String typeNameOne = ""; 
@@ -182,6 +181,8 @@ public class Game {
 		}
 
 	}
+	
+	//
 	public boolean isPlayerOneVic() {
 		return playerOneVic;
 	}
