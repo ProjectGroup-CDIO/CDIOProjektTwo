@@ -9,10 +9,11 @@ import java.awt.Color; //in order to change color of the car
 
 public class Game {
 
-	boolean playerOneVic = false;
-    boolean playerTwoVic = false;
-	boolean playerOneLoss = false;
-	boolean playerTwoLoss = false;
+	private boolean playerOneVic = false;
+    private boolean playerTwoVic = false;
+	private boolean playerOneLoss = false;
+	private boolean playerTwoLoss = false;
+
 
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
@@ -23,12 +24,13 @@ public class Game {
 	boolean game = true;
 
 	//Language used in the code, will be changed by the language setting.
-	static String typeNameOne = ""; 
-	static String typeNameTwo = "";
-	static String rollDice = "";
-	static String won = "";
-	static String isWinner = "";
-	static String draw = "";
+	private static String typeNameOne = ""; 
+	private static String typeNameTwo = "";
+	private static String rollDice = "";
+	private static String won = "";
+	private static String isWinner = "";
+	private static String draw = "";
+
 
 
 	public void game(){
@@ -179,6 +181,68 @@ public class Game {
 
 		}
 
+	}
+	public boolean isPlayerOneVic() {
+		return playerOneVic;
+	}
+	public void setPlayerOneVic(boolean playerOneVic) {
+		this.playerOneVic = playerOneVic;
+	}
+	public boolean isPlayerTwoVic() {
+		return playerTwoVic;
+	}
+	public void setPlayerTwoVic(boolean playerTwoVic) {
+		this.playerTwoVic = playerTwoVic;
+	}
+	public boolean isPlayerOneLoss() {
+		return playerOneLoss;
+	}
+	public void setPlayerOneLoss(boolean playerOneLoss) {
+		this.playerOneLoss = playerOneLoss;
+	}
+	public boolean isPlayerTwoLoss() {
+		return playerTwoLoss;
+	}
+	public void setPlayerTwoLoss(boolean playerTwoLoss) {
+		this.playerTwoLoss = playerTwoLoss;
+	}
+	
+	//Language Strings getters and setters
+	public static String getTypeNameOne() {
+		return typeNameOne;
+	}
+	public static void setTypeNameOne(String typeNameOne) {
+		Game.typeNameOne = typeNameOne;
+	}
+	public static String getTypeNameTwo() {
+		return typeNameTwo;
+	}
+	public static void setTypeNameTwo(String typeNameTwo) {
+		Game.typeNameTwo = typeNameTwo;
+	}
+	public static String getRollDice() {
+		return rollDice;
+	}
+	public static void setRollDice(String rollDice) {
+		Game.rollDice = rollDice;
+	}
+	public static String getWon() {
+		return won;
+	}
+	public static void setWon(String won) {
+		Game.won = won;
+	}
+	public static String getIsWinner() {
+		return isWinner;
+	}
+	public static void setIsWinner(String isWinner) {
+		Game.isWinner = isWinner;
+	}
+	public static String getDraw() {
+		return draw;
+	}
+	public static void setDraw(String draw) {
+		Game.draw = draw;
 	}
 
 }
