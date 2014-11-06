@@ -4,8 +4,8 @@ package gameEngine;
 import javax.swing.JOptionPane;
 
 import boundaryToMatador.GUI;
-import boundaryToMatador.Car; //til at oprette en bil
-import java.awt.Color; //til at farvegive vinder/uafgjort bilerne
+import boundaryToMatador.Car; //in order to create a custom car
+import java.awt.Color; //in order to change color of the car 
 
 public class Game {
 
@@ -16,18 +16,19 @@ public class Game {
 
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
+	Language language = new Language(); 
 
 	boolean playerOne = true;
 	boolean playerTwo = false;
 	boolean game = true;
 
 	//Language used in the code, will be changed by the language setting.
-	String typeNameOne = ""; 
-	String typeNameTwo = "";
-	String rollDice = "";
-	String won = "";
-	String isWinner = "";
-	String draw = "";
+	static String typeNameOne = ""; 
+	static String typeNameTwo = "";
+	static String rollDice = "";
+	static String won = "";
+	static String isWinner = "";
+	static String draw = "";
 
 
 	public void game(){
@@ -45,23 +46,7 @@ public class Game {
 		//System.out.println(input);
 
 		//language selection, changes variables and sets the game board language.
-		if(input.equals("Dansk")){
-			GUI.create("fields-Dansk.txt");
-			typeNameOne = "Indtast navn for spiller 1"; 
-			typeNameTwo = "Indtast navn for spiller 2";
-			rollDice = "Kast Terning";
-			won = " VANDT!!!";
-			isWinner = " ER VINDEREN!!!";
-			draw = "SPILLET BLEV UAFGJORT";
-		}else if(input.equals("English")){
-			GUI.create("fields-English.txt");
-			typeNameOne = "Enter name for player 1";
-			typeNameTwo = "Enter name for player 2";
-			rollDice = "Roll Dice";
-			won = " WON!!!";
-			isWinner = " IS THE WINNER!!!";
-			draw = "THE GAME WAS A DRAW";
-		}
+		language.languageSelection(input);
 
 
 		//User names are prompted from the users, and store in previous variables
