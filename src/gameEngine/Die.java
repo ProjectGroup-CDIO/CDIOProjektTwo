@@ -6,7 +6,7 @@ public class Die
 	
 	private final int MAX = 6; //maximal v�rdi p� terningen
 	
-	public int faceValue; // viser ternigens aktuelle v�rdi
+	private int faceValue; // viser ternigens aktuelle v�rdi
 	
 	public int rollDie()
 	{
@@ -15,6 +15,16 @@ public class Die
 		
 		return faceValue;
 	}
+
+	public int getFaceValue() {
+		return faceValue;
+	}
+
+	public void setFaceValue(int faceValue) {
+		this.faceValue = faceValue;
+	}
+	
+	
 
 }
 
