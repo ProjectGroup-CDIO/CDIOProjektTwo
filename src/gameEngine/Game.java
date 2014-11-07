@@ -9,7 +9,7 @@ import java.awt.Color; //in order to change color of the car
 public class Game {
 
 	private boolean playerOneVic = false;
-    private boolean playerTwoVic = false;
+	private boolean playerTwoVic = false;
 	private boolean playerOneLoss = false;
 	private boolean playerTwoLoss = false;
 
@@ -182,41 +182,9 @@ public class Game {
 
 	}
 	
-	//
-	public boolean isPlayerOneVic() {
-		return playerOneVic;
-	}
-	public void setPlayerOneVic(boolean playerOneVic) {
-		this.playerOneVic = playerOneVic;
-	}
-	public boolean isPlayerTwoVic() {
-		return playerTwoVic;
-	}
-	public void setPlayerTwoVic(boolean playerTwoVic) {
-		this.playerTwoVic = playerTwoVic;
-	}
-	public boolean isPlayerOneLoss() {
-		return playerOneLoss;
-	}
-	public void setPlayerOneLoss(boolean playerOneLoss) {
-		this.playerOneLoss = playerOneLoss;
-	}
-	public boolean isPlayerTwoLoss() {
-		return playerTwoLoss;
-	}
-	public void setPlayerTwoLoss(boolean playerTwoLoss) {
-		this.playerTwoLoss = playerTwoLoss;
-	}
-	
 	//Language Strings getters and setters
-	public static String getTypeNameOne() {
-		return typeNameOne;
-	}
 	public static void setTypeNameOne(String typeNameOne) {
 		Game.typeNameOne = typeNameOne;
-	}
-	public static String getTypeNameTwo() {
-		return typeNameTwo;
 	}
 	public static void setTypeNameTwo(String typeNameTwo) {
 		Game.typeNameTwo = typeNameTwo;
@@ -227,20 +195,11 @@ public class Game {
 	public static void setRollDice(String rollDice) {
 		Game.rollDice = rollDice;
 	}
-	public static String getWon() {
-		return won;
-	}
 	public static void setWon(String won) {
 		Game.won = won;
 	}
-	public static String getIsWinner() {
-		return isWinner;
-	}
 	public static void setIsWinner(String isWinner) {
 		Game.isWinner = isWinner;
-	}
-	public static String getDraw() {
-		return draw;
 	}
 	public static void setDraw(String draw) {
 		Game.draw = draw;
