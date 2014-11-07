@@ -37,7 +37,7 @@ public class Game {
 		String playerOneName = ""; 
 		String playerTwoName = ""; 
 		//The choices of languages that can be used
-		String[] choices = { "English", "Dansk"};
+		String[] choices = { "English", "Dansk", "Deutsch"};
 		//Selection box in which the user has to choose language
 		String input = (String) JOptionPane.showInputDialog(null, "Choose language:",
 				"The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null,
