@@ -4,7 +4,7 @@ public class Fields {
 
 	public static String field(Player player, int trow, String i){ 
 
-		if(i.equals("Roll Dice")|| i.equals("Kast Terning")){
+		if(i.equals(Game.getRollDice())){
 
 			if(trow==2){
 				player.getAccount().deposit(250);

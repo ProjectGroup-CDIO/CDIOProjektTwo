@@ -2,32 +2,34 @@
 package gameEngine;
 
 import javax.swing.JOptionPane;
-
 import boundaryToMatador.GUI;
-import boundaryToMatador.Car; //til at oprette en bil
-import java.awt.Color; //til at farvegive vinder/uafgjort bilerne
+import boundaryToMatador.Car; //in order to create a custom car
+import java.awt.Color; //in order to change color of the car 
 
 public class Game {
 
-	boolean playerOneVic = false;
-    boolean playerTwoVic = false;
-	boolean playerOneLoss = false;
-	boolean playerTwoLoss = false;
+	private boolean playerOneVic = false;
+	private boolean playerTwoVic = false;
+	private boolean playerOneLoss = false;
+	private boolean playerTwoLoss = false;
 
 	Player player1 = new Player("PlayerOne");
 	Player player2 = new Player("PlayerTwo");
+	
+	Language language = new Language(); 
 
-	boolean playerOne = true;
-	boolean playerTwo = false;
-	boolean game = true;
+	private boolean playerOne = true;
+	private boolean playerTwo = false;
+	private boolean game = true;
 
 	//Language used in the code, will be changed by the language setting.
-	String typeNameOne = ""; 
-	String typeNameTwo = "";
-	String rollDice = "";
-	String won = "";
-	String isWinner = "";
-	String draw = "";
+	private static String typeNameOne = ""; 
+	private static String typeNameTwo = "";
+	private static String rollDice = "";
+	private static String won = "";
+	private static String isWinner = "";
+	private static String draw = "";
+
 
 
 	public void game(){
@@ -45,23 +47,7 @@ public class Game {
 		//System.out.println(input);
 
 		//language selection, changes variables and sets the game board language.
-		if(input.equals("Dansk")){
-			GUI.create("fields-Dansk.txt");
-			typeNameOne = "Indtast navn for spiller 1"; 
-			typeNameTwo = "Indtast navn for spiller 2";
-			rollDice = "Kast Terning";
-			won = " VANDT!!!";
-			isWinner = " ER VINDEREN!!!";
-			draw = "SPILLET BLEV UAFGJORT";
-		}else if(input.equals("English")){
-			GUI.create("fields-English.txt");
-			typeNameOne = "Type name of player 1";
-			typeNameTwo = "Type name of player 2";
-			rollDice = "Roll Dice";
-			won = " WON!!!";
-			isWinner = " IS THE WINNER!!!";
-			draw = "THE GAME WAS A DRAW";
-		}
+		language.languageSelection(input);
 
 
 		//User names are prompted from the users, and store in previous variables
@@ -194,6 +180,29 @@ public class Game {
 
 		}
 
+	}
+	
+	//Language Strings getters and setters
+	public static void setTypeNameOne(String typeNameOne) {
+		Game.typeNameOne = typeNameOne;
+	}
+	public static void setTypeNameTwo(String typeNameTwo) {
+		Game.typeNameTwo = typeNameTwo;
+	}
+	public static String getRollDice() {
+		return rollDice;
+	}
+	public static void setRollDice(String rollDice) {
+		Game.rollDice = rollDice;
+	}
+	public static void setWon(String won) {
+		Game.won = won;
+	}
+	public static void setIsWinner(String isWinner) {
+		Game.isWinner = isWinner;
+	}
+	public static void setDraw(String draw) {
+		Game.draw = draw;
 	}
 
 }
