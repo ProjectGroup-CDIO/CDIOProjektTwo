@@ -77,11 +77,11 @@ public class Game {
 				GUI.setDice(dieOne.getFaceValue(), dieTwo.getFaceValue());
 
 				if(playerOne) {
-					GUI.removeAllCars(playerOneName);//In case of trow==10. Removes the player from the board.
-					GUI.setCar(1, playerOneName);//Sets the player at the first field
-					GUI.removeAllCars(playerTwoName);//Resets the postions of the other player
+					GUI.removeAllCars(playerOneName);//Removes the player from the board. Only used in case of trow == 10, as the car would have otherwise been removed on playerTwos turn
+					GUI.setCar(1, playerOneName);//Sets the player at Start (field1)
+					GUI.removeAllCars(playerTwoName);//Resets the positions of the other player
 					GUI.setCar(1, playerTwoName);
-					GUI.removeCar(1, playerOneName); //Removes the player. So the player can get a new postion
+					GUI.removeCar(1, playerOneName); //Removes the car from Start
 					GUI.setCar(trow, playerOneName); //sets car at field corresponding to sum of faceValues
 					Fields.field(player1, trow, i);
 					GUI.setBalance(playerOneName, player1.getAccount().getBalance());
@@ -100,7 +100,7 @@ public class Game {
 				if(playerTwo) {
 					GUI.removeAllCars(playerOneName);
 					GUI.setCar(1, playerOneName);
-					GUI.removeAllCars(playerTwoName);//In case of trow == 10
+					GUI.removeAllCars(playerTwoName);
 					GUI.setCar(1, playerTwoName);
 					GUI.removeCar(1, playerTwoName);
 					GUI.setCar(trow, playerTwoName); 
