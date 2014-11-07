@@ -73,8 +73,8 @@ public class Game {
 			if(i.equals(rollDice)){
 				dieOne.rollDie();
 				dieTwo.rollDie();
-				int trow=dieOne.faceValue+dieTwo.faceValue;
-				GUI.setDice(dieOne.faceValue, dieTwo.faceValue);
+				int trow=dieOne.getFaceValue()+dieTwo.getFaceValue();
+				GUI.setDice(dieOne.getFaceValue(), dieTwo.getFaceValue());
 
 				if(playerOne) {
 					GUI.removeAllCars(playerOneName);//In case of trow==10. Removes the player from the board.
